@@ -129,7 +129,7 @@
       <div class="col-xs-4 hidden-md-up"></div>
       <div class="col-md-10 col-xs-6">
         <div class="row">
-          <div class="col-md-6 col-xs-6 qty">
+          <div class="col-md-6 col-xs-7 qty">
             {if !empty($product.is_gift)}
               <span class="gift-quantity">{$product.quantity}</span>
             {else}
@@ -148,7 +148,7 @@
               />
             {/if}
           </div>
-          <div class="col-md-6 col-xs-2 price">
+          <div class="col-md-6 col-xs-3 price">
             <span class="product-price">
               <strong>
                 {if !empty($product.is_gift)}

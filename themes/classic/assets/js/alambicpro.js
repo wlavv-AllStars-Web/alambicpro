@@ -17,3 +17,28 @@ function smoothScroll(event) {
         window.location.href = '/#' + sectionId;
     }
 }
+
+
+
+function clickdropdown(e) {
+    const dropdown = e.nextElementSibling;
+    dropdown.classList.toggle('active');
+
+    document.addEventListener('click', function(event) {
+        const target = event.target;
+        if (!dropdown.contains(target) && !e.contains(target)) {
+            dropdown.classList.remove('active');
+        }
+    });
+}
+
+// addEventListener("scroll", (event) => {
+//     const btnTop = document.querySelector("#products .up")
+//     const btnTopLink = btnTop.querySelector(".btn-top")
+//     if(window.scrollY > 100) {
+//         btnTop.style.display = "flex";
+//         btnTopLink.style.display = "flex";
+//     }else {
+//         btnTop.style.display = "none";
+//     }
+// });

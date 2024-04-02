@@ -77,15 +77,16 @@
               <h1 class="header-top-logo" class="hidden-sm-down">
                 {* {renderLogo} *}
                 {* <img src="/themes/classic/assets/css/whisky-still-30.png" width="24" height="24" /> *}
-                ALAMBIC PRO 
+                <a href="/">ALAMBIC PRO</a>
+                
               </h1>
               <h1 class="hidden-md-up">
-                {renderLogo} 
+                {* {renderLogo}  *}
               </h1>
             {else}
               {* {renderLogo} *}
               <h1 class="header-top-logo" class="hidden-sm-down">
-              ALAMBIC PRO 
+              <a href="/">ALAMBIC PRO</a>
               </h1>
             {/if}
           {/if}
@@ -96,15 +97,16 @@
             <li class="menu-item {if $currentUrl === $link->getPageLink('index',true)}active{/if}"><a href="/">Home</a></li>
             <li class="menu-item"><a href="/#aboutus" onclick="smoothScroll(event)">About Us</a></li>
             <li class="menu-item dropdown {if $currentUrl === $link->getCategoryLink(2)}active{/if}">
-              <div class="dropbtn"><a href="{$categories[1][2]['infos']['id_category']}-{$categories[1][2]['infos']['link_rewrite']}">{l s='Products' d='Shop.Theme.Global'}</a> <i class="fa-solid fa-caret-down"></i></div>
+              <div class="dropbtn" onclick="clickdropdown(this)"><a>{l s='Products' d='Shop.Theme.Global'}</a> <i class="fa-solid fa-caret-down"></i></div>
               <ul class="dropdown-content hidden-md-down">
                 {foreach from=$categories[2] item=category}
                   {* {"/"|cat:$currentLanguage|cat:"/"|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite} *}
                 <li><a class="{if $smarty.server.REQUEST_URI === "/"|cat:$currentLanguage|cat:"/"|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite}activeLink{/if}" href="{$category.infos.id_category}-{$category.infos.link_rewrite}">{$category.infos.name}</a></li>
                 {/foreach}
+                <li><a href="{$categories[1][2]['infos']['id_category']}-{$categories[1][2]['infos']['link_rewrite']}">All</a></li>
               </ul>
             </li>
-            <li class="menu-item"><a>?</a></li>
+            <li class="menu-item"><a>(Em Falta)</a></li>
             <li class="menu-item {if $currentUrl === $link->getPageLink('contact', true)}active{/if}"><a href="{$link->getPageLink('contact', true)}">Contact</a></li>
           </ul>
         </div>
@@ -118,11 +120,20 @@
       <div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display:none;">
         <div class="js-top-menu mobile" id="_mobile_top_menu">
         <ul class="menu_list">
-          <li class="menu-item active">Home</li>
-          <li class="menu-item">About Us</li>
-          <li class="menu-item">Products</li>
-          <li class="menu-item">?</li>
-          <li class="menu-item">Contact</li>
+          <li class="menu-item active"><a href="/">Home</a></li>
+          <li class="menu-item"><a href="/#aboutus">About Us</a></li>
+          
+          <li class="menu-item dropdown {if $currentUrl === $link->getCategoryLink(2)}active{/if}">
+            <div class="dropbtn" onclick="clickdropdown(this)"><a>{l s='Products' d='Shop.Theme.Global'}</a> <i class="fa-solid fa-caret-down"></i></div>
+            <ul class="dropdown-content">
+              {foreach from=$categories[2] item=category}
+                {* {"/"|cat:$currentLanguage|cat:"/"|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite} *}
+              <li><a class="{if $smarty.server.REQUEST_URI === "/"|cat:$currentLanguage|cat:"/"|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite}activeLink{/if}" href="{$category.infos.id_category}-{$category.infos.link_rewrite}">{$category.infos.name}</a></li>
+              {/foreach}
+            </ul>
+          </li>
+          <li class="menu-item"><a>(Em Falta)</a></li>
+          <li class="menu-item"><a href="{$link->getPageLink('contact', true)}">Contact</a></li>
         </ul>
         </div>
         <div class="js-top-menu-bottom">
@@ -139,6 +150,18 @@
 
 <style>
 
+.dropdown-content {
+  display: none;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
 
 
 </style>
+
+<script>
+
+
+</script>
