@@ -39,6 +39,8 @@ class IndexControllerCore extends FrontController
         $this->context->smarty->assign([
             'HOOK_HOME' => Hook::exec('displayHome'),
         ]);
+        
         $this->setTemplate('index');
     }
+
 }

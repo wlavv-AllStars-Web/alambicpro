@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-27 09:16:52
+/* Smarty version 4.3.4, created on 2024-03-28 16:24:54
   from 'C:\xampp\htdocs\alambicpro\themes\classic\templates\_partials\javascript.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6603e40415f9e0_53058626',
+  'unifunc' => 'content_660599d69f3676_12059452',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e02ecd67a8ceaccb79bd26fcaf75ec4dc0b5e376' => 
     array (
       0 => 'C:\\xampp\\htdocs\\alambicpro\\themes\\classic\\templates\\_partials\\javascript.tpl',
-      1 => 1697815446,
+      1 => 1711561770,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6603e40415f9e0_53058626 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660599d69f3676_12059452 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\alambicpro\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['javascript']->value['external'], 'js');
 $_smarty_tpl->tpl_vars['js']->do_else = true;
@@ -68,6 +68,9 @@ $_smarty_tpl->tpl_vars['var_value']->do_else = false;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
   <?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ type="text/javascript" src="/themes/classic/assets/js/alambicpro.js"><?php echo '</script'; ?>
 >
 <?php }
 }

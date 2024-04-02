@@ -124,6 +124,7 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
                 [
                     'actionFrontControllerSetMedia',
                     'displayFooterBefore',
+                    'displayHome',
                     'actionCustomerAccountAdd',
                     'actionObjectCustomerUpdateBefore',
                     'additionalCustomerFormFields',

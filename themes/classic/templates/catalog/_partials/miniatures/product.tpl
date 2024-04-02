@@ -120,7 +120,7 @@
         {/block}
       </div>
 
-      {include file='catalog/_partials/product-flags.tpl'}
+      {* {include file='catalog/_partials/product-flags.tpl'} *}
     </div>
   </article>
 </div>

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-27 09:16:51
+/* Smarty version 4.3.4, created on 2024-03-28 16:24:54
   from 'C:\xampp\htdocs\alambicpro\themes\classic\templates\_partials\pagination-seo.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6603e403cd5346_13003601',
+  'unifunc' => 'content_660599d681d414_41158655',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6603e403cd5346_13003601 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660599d681d414_41158655 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\alambicpro\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 

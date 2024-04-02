@@ -30,23 +30,30 @@
   </div>
 </div>
 <div class="footer-container">
-  <div class="container">
-    <div class="row">
+  <div class="container-md container-fluid">
+  <div class="col-lg-12" style="display: flex;">
+    <div class="footer_row col-lg-8">
       {block name='hook_footer'}
         {hook h='displayFooter'}
       {/block}
     </div>
-    <div class="row">
+    <div class="footer-after col-lg-4">
       {block name='hook_footer_after'}
         {hook h='displayFooterAfter'}
       {/block}
+
+      <div style="display: flex;justify-content:end;">
+        <img src="/themes/classic/assets/css/ingenico.svg" loading="lazy" alt="" width="103" height="41" class="slick-slide-image loaded">
+        <img src="/themes/classic/assets/css/multibanco.svg" loading="lazy" alt="" width="103" height="41" class="slick-slide-image loaded">
+      </div>
     </div>
+  </div>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12 copyright-container">
         <p class="text-sm-center">
           {block name='copyright_link'}
-            <a href="https://www.prestashop-project.org/" target="_blank" rel="noopener noreferrer nofollow">
-              {l s='%copyright% %year% - Ecommerce software by %prestashop%' sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
+            <a class="copyrights" href="/" target="_blank" rel="noopener noreferrer nofollow">
+              {l s='%copyright% %year% - Alambic Pro' sprintf=['%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
             </a>
           {/block}
         </p>

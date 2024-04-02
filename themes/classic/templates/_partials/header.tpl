@@ -22,6 +22,9 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
+ {* {assign var="languages" value=Language::getLanguages(true, $this->context->shop->id)} *}
+ {assign var="currentUrl" value="http://"|cat:$smarty.server.HTTP_HOST|cat:$smarty.server.REQUEST_URI}
+ {assign var="currentLanguage" value=Context::getContext()->language->iso_code}
 {block name='header_banner'}
   <div class="header-banner">
     {hook h='displayBanner'}
@@ -35,6 +38,16 @@
         <div class="hidden-sm-down">
           <div class="col-md-5 col-xs-12">
             {hook h='displayNav1'}
+            <div class="whatsapp_content hidden-sm-down">
+              <div class="whatsapp_logo">
+              <a href="https://wa.me/961234567" target="_blank" > 
+                <img src = "/themes/classic/assets/css/whatsapp.svg" alt="Whatsapp Logo"/>
+              </a>
+              </div>
+              <div class="whatsapp_number">
+                <a href="https://wa.me/961234567" target="_blank">961234567</a>
+              </div>
+            </div>
           </div>
           <div class="col-md-7 right-nav">
               {hook h='displayNav2'}
@@ -61,20 +74,57 @@
         <div class="col-md-2 hidden-sm-down" id="_desktop_logo">
           {if $shop.logo_details}
             {if $page.page_name == 'index'}
-              <h1>
-                {renderLogo}
+              <h1 class="header-top-logo" class="hidden-sm-down">
+                {* {renderLogo} *}
+                {* <img src="/themes/classic/assets/css/whisky-still-30.png" width="24" height="24" /> *}
+                ALAMBIC PRO 
+              </h1>
+              <h1 class="hidden-md-up">
+                {renderLogo} 
               </h1>
             {else}
-              {renderLogo}
+              {* {renderLogo} *}
+              <h1 class="header-top-logo" class="hidden-sm-down">
+              ALAMBIC PRO 
+              </h1>
             {/if}
           {/if}
         </div>
-        <div class="header-top-right col-md-10 col-sm-12 position-static">
-          {hook h='displayTop'}
+{* {"/"|cat:$currentLanguage|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite} *}
+        <div class="menu col-md-8 hidden-sm-down">
+          <ul class="menu_list">
+            <li class="menu-item {if $currentUrl === $link->getPageLink('index',true)}active{/if}"><a href="/">Home</a></li>
+            <li class="menu-item"><a href="/#aboutus" onclick="smoothScroll(event)">About Us</a></li>
+            <li class="menu-item dropdown {if $currentUrl === $link->getCategoryLink(2)}active{/if}">
+              <div class="dropbtn"><a href="{$categories[1][2]['infos']['id_category']}-{$categories[1][2]['infos']['link_rewrite']}">{l s='Products' d='Shop.Theme.Global'}</a> <i class="fa-solid fa-caret-down"></i></div>
+              <ul class="dropdown-content hidden-md-down">
+                {foreach from=$categories[2] item=category}
+                  {* {"/"|cat:$currentLanguage|cat:"/"|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite} *}
+                <li><a class="{if $smarty.server.REQUEST_URI === "/"|cat:$currentLanguage|cat:"/"|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite}activeLink{/if}" href="{$category.infos.id_category}-{$category.infos.link_rewrite}">{$category.infos.name}</a></li>
+                {/foreach}
+              </ul>
+            </li>
+            <li class="menu-item"><a>?</a></li>
+            <li class="menu-item {if $currentUrl === $link->getPageLink('contact', true)}active{/if}"><a href="{$link->getPageLink('contact', true)}">Contact</a></li>
+          </ul>
+        </div>
+        <div class="header-top-right col-md-2 col-sm-12 position-static hidden-sm-down">
+          <div class="header_top_icons">
+            {hook h='displayTop'}
+          </div>
+          
         </div>
       </div>
       <div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display:none;">
-        <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
+        <div class="js-top-menu mobile" id="_mobile_top_menu">
+        <ul class="menu_list">
+          <li class="menu-item active">Home</li>
+          <li class="menu-item">About Us</li>
+          <li class="menu-item">Products</li>
+          <li class="menu-item">?</li>
+          <li class="menu-item">Contact</li>
+        </ul>
+        </div>
         <div class="js-top-menu-bottom">
           <div id="_mobile_currency_selector"></div>
           <div id="_mobile_language_selector"></div>
@@ -85,3 +135,10 @@
   </div>
   {hook h='displayNavFullWidth'}
 {/block}
+
+
+<style>
+
+
+
+</style>

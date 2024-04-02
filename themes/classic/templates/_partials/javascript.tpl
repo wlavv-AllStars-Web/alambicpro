@@ -38,4 +38,5 @@
     var {$var_name} = {$var_value|json_encode nofilter};
     {/foreach}
   </script>
+  <script type="text/javascript" src="/themes/classic/assets/js/alambicpro.js"></script>
 {/if}

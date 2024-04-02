@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-26 14:18:46
+/* Smarty version 4.3.4, created on 2024-03-28 16:21:44
   from 'module:ps_customersigninps_customersignin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6602d9468d4cf0_28183606',
+  'unifunc' => 'content_660599180e7a86_64719998',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd5f8f570180f74d1dbdd1a1d2af0445e90a6650c' => 
     array (
       0 => 'module:ps_customersigninps_customersignin.tpl',
-      1 => 1697815446,
+      1 => 1711560016,
       2 => 'module',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6602d9468d4cf0_28183606 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660599180e7a86_64719998 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="_desktop_user_info">
   <div class="user-info">
     <?php if ($_smarty_tpl->tpl_vars['logged']->value) {?>
@@ -30,10 +30,8 @@ function content_6602d9468d4cf0_28183606 (Smarty_Internal_Template $_smarty_tpl)
 "
         rel="nofollow"
       >
-        <i class="material-icons">&#xE7FF;</i>
-        <?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Sign out','d'=>'Shop.Theme.Actions'),$_smarty_tpl ) );?>
-
-      </a>
+                <i class="fa-solid fa-user-large-slash"></i>
+              </a>
       <a
         class="account"
         href="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['urls']->value['pages']['my_account'], ENT_QUOTES, 'UTF-8');?>
@@ -55,10 +53,8 @@ function content_6602d9468d4cf0_28183606 (Smarty_Internal_Template $_smarty_tpl)
 "
         rel="nofollow"
       >
-        <i class="material-icons">&#xE7FF;</i>
-        <span class="hidden-sm-down"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Sign in','d'=>'Shop.Theme.Actions'),$_smarty_tpl ) );?>
-</span>
-      </a>
+                <i class="fa-solid fa-user-large"></i>
+              </a>
     <?php }?>
   </div>
 </div>

@@ -605,6 +605,7 @@ class FrontControllerCore extends Controller
     public function initContent()
     {
         $this->assignGeneralPurposeVariables();
+        $this->getCategories();
         $this->process();
 
         if (!isset($this->context->cart)) {
@@ -2247,5 +2248,34 @@ class FrontControllerCore extends Controller
         }
 
         return Validate::isUrl($data);
+    }
+
+        
+    public function getCategories()
+    {
+        $lang = (int)Context::getContext()->language->id;
+		$cats = Category::getCategories($lang);				
+		$this->context->smarty->assign('categories', $cats);		
+			
+		// $sqlprod =	'SELECT
+		// 			ps_product_lang.`name`,
+		// 			ps_product_lang.`link_rewrite`,
+		// 			ps_product_lang.`id_product`,
+		// 			ps_category_product.`id_category`,
+		// 			ps_product_shop.`active`
+		// 			FROM
+		// 			`ps_product_lang`
+		// 			LEFT JOIN 
+		// 			`ps_category_product`
+		// 			ON ps_product_lang.`id_product`= ps_category_product.`id_product`
+		// 			LEFT JOIN 
+		// 			`ps_product_shop`
+		// 			ON ps_product_lang.`id_product`= ps_product_shop.`id_product`
+		// 			WHERE
+		// 			`id_lang` = '.$lang.'
+		// 			';		
+		
+		// $prods = Db::getInstance()->executeS($sqlprod);		
+		// $this->context->smarty->assign('products', $prods);	
     }
 }
