@@ -857,3 +857,29 @@ main {
 .product-miniature .highlighted-informations .quick-view:hover {
   color: var(--text-color1);
 }
+
+.btn-primary.active, .btn-primary:active, .open > .btn-primary.dropdown-toggle {
+  background-color: var(--text-color1) !important;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  background-color: var(--text-color1) !important;
+}
+
+.custom-radio input[type="radio"]:checked + span {
+  background-color: var(--text-color1-100) !important;
+}
+.form-control{
+  color: var(--text-color1-100);
+}
+
+.form-control:focus {
+  color: #232323;
+  background-color: #fff;
+  outline: .1875rem solid var(--text-color1-100) ; 
+  border-color: var(--text-color1-100);
+}
+
+input[type="checkbox"] {
+  accent-color: var(--text-color1-100) !important;
+}
