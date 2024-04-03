@@ -30,6 +30,13 @@
   </div>
 </div>
 <div class="footer-container">
+  {* <div class="whatsapp_content hidden-md-up">
+    <div class="whatsapp_logo">
+    <a href="https://wa.me/961234567" target="_blank" > 
+      <img src = "/themes/classic/assets/css/whatsapp.svg" alt="Whatsapp Logo"/>
+    </a>
+    </div>
+  </div> *}
   <div class="container-md container-fluid">
   <div class="col-lg-12" style="display: flex;">
     <div class="footer_row col-lg-8">

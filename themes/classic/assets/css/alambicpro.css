@@ -673,7 +673,10 @@ main {
     background-image: url('whisky-still-30_white.png');
     top: 1rem;
 }
-
+.aboutus_img.lazy{
+  background-image: none;
+   background-color: #F1F1FA;
+}
 .aboutus_img {
   width: 100%;
   background-image: url("https://albinovieira.pt/wp-content/uploads/2023/11/foto-sobre-01.webp");
@@ -742,6 +745,10 @@ main {
   background-repeat: no-repeat;
   background-position: center;
 }
+.ourphilosophy_img.lazy{
+  background-image: none;
+   background-color: #F1F1FA;
+}
 
   #ourmission {
     margin: 4rem 0 0 0;
@@ -800,6 +807,10 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.ourmission_img.lazy{
+  background-image: none;
+   background-color: var(--text-color1-100);
 }
 
 .quickview .images-container {
@@ -901,6 +912,31 @@ input[type="checkbox"] {
   color: var(--text-color1-100);
 }
 
+/* .footer-container .whatsapp_content{
+  display: none;
+} */
+
+.product-miniature .product-description{
+  background: #f6f6f6;
+}
+
+.product-miniature .product-price-and-shipping {
+  font-weight: 700;
+  color: var(--text-color1-100);
+  text-align: center;
+}
+
+.product-miniature .product-title{
+  text-transform: uppercase;
+}
+
+.btn-comment {
+  background-color: var(--text-color1-200);
+}
+
+#post-product-comment-form input:focus-visible,#post-product-comment-form textarea:focus-visible{
+  outline: 1px solid var(--text-color1);
+}
 
 /* responsive layout */
 
@@ -1167,6 +1203,8 @@ input[type="checkbox"] {
     margin-top: 2rem;
     padding: 0;
     justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .footer-container .container-fluid{
@@ -1262,6 +1300,7 @@ input[type="checkbox"] {
 
   .dropdown .active{
     max-height: none;
+    width: 100%;
   }
 
   .dropdown:hover .dropdown-content{
@@ -1282,7 +1321,7 @@ input[type="checkbox"] {
 
   #mobile_top_menu_wrapper {
     padding: 15px;
-    background: #fff;
+    background: #f6f6f6;
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -1304,6 +1343,46 @@ input[type="checkbox"] {
   .footer-container .links .wrapper i {
     color: #fff !important;
   }
+
+  .footer-container .whatsapp_content{
+    display: block;
+  }
+  .footer-container .whatsapp_content .whatsapp_logo img{
+    width: 38px;
+  }
+  
+  .tabs {
+    padding: 1.25rem 1rem;
+  }
+
+  .ui-widget-content{
+    border: none !important;
+  }
+
+  #my-account .links a:hover i {
+    color: var(--text-color1-200) !important;
+  }
+  #my-account .links a i {
+    color: var(--text-color1-100) !important;
+  }
+
+  .btn.btn-primary.add-to-cart:focus {
+    background: var(--text-color1-100) !important;
+  }
+  .btn.btn-primary.add-to-cart:hover {
+    background: var(--text-color1-100) !important;
+  }
+
+  #cart .product-line-grid-right .product-price {
+    color: var(--text-color1-100);
+  }
+  #cart .cart-line-product-actions .remove-from-cart{
+    color: var(--text-color1-100);
+  }
+  #cart .product-line-actions .js-cart-line-product-quantity {
+    color: var(--text-color1-100);
+  }
+
 }
 
 @media (max-width: 400px) {

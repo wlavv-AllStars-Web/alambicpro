@@ -96,7 +96,7 @@
           <ul class="menu_list">
             <li class="menu-item {if $currentUrl === $link->getPageLink('index',true)}active{/if}"><a href="/">Home</a></li>
             <li class="menu-item"><a href="/#aboutus" onclick="smoothScroll(event)">About Us</a></li>
-            <li class="menu-item dropdown {if $currentUrl === $link->getCategoryLink(2)}active{/if}">
+            <li class="menu-item dropdown">
               <div class="dropbtn" onclick="clickdropdown(this)"><a>{l s='Products' d='Shop.Theme.Global'}</a> <i class="fa-solid fa-caret-down"></i></div>
               <ul class="dropdown-content hidden-md-down">
                 {foreach from=$categories[2] item=category}

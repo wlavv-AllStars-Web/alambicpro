@@ -29,7 +29,7 @@
       {foreach from=$social_links item='social_link'}
         <li class="{$social_link.class}"><a href="{$social_link.url}" target="_blank" rel="noopener noreferrer">{$social_link.label}</a></li>
       {/foreach}
-      <div class="whatsapp_content hidden-sm-down">
+      <div class="whatsapp_content">
       <div class="whatsapp_logo">
       <a href="https://wa.me/961234567" target="_blank" > 
         <img src = "/themes/classic/assets/css/whatsapp_footer.svg" alt="Whatsapp Logo"/>

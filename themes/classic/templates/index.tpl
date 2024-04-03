@@ -33,47 +33,47 @@
             {$HOOK_HOME nofilter}
 
             <div class="grid">
-              <div class="card_1 card">
+              <div class="card_1 card lazy">
                 <div class="layer"></div>
                 <div class="content_category">Alambiques Tradicionais</div>
                 <div class="buy"><a href="{$link->getCategoryLink(3)}">COMPRAR JÁ</a></div>
               </div>
-              <div class="card_2 card">
+              <div class="card_2 card lazy">
                 <div class="layer"></div>
                 <div class="content_category">Alambiques Coluna</div>
                 <div class="buy"><a href="{$link->getCategoryLink(4)}">COMPRAR JÁ</a></div>
               </div>
-              <div class="card_3 card">
+              <div class="card_3 card lazy">
                 <div class="layer"></div>
                 <div class="content_category">Alambiques Vedados a Água</div>
                 <div class="buy"><a href="{$link->getCategoryLink(5)}">COMPRAR JÁ</a></div>
               </div>
-              <div class="card_4 card">
+              <div class="card_4 card lazy">
                 <div class="layer"></div>
                 <div class="content_category">Alambiques Gin</div>
                 <div class="buy"><a href="{$link->getCategoryLink(6)}">COMPRAR JÁ</a></div>
               </div>
-              <div class="card_5 card">
+              <div class="card_5 card lazy">
                 <div class="layer"></div>
                 <div class="content_category">Alambiques Whisky</div>
                 <div class="buy"><a href="{$link->getCategoryLink(7)}">COMPRAR JÁ</a></div>
               </div>
-              <div class="card_6 card">
+              <div class="card_6 card lazy">
                 <div class="layer"></div>
                 <div class="content_category">Alambiques Oleos Essênciais</div>
                 <div class="buy"><a href="{$link->getCategoryLink(8)}">COMPRAR JÁ</a></div>
               </div>
-              <div class="card_7 card">
+              <div class="card_7 card lazy">
                 <div class="layer"></div>
                 <div class="content_category">Alambiques Banho Maria</div>
                 <div class="buy"><a href="{$link->getCategoryLink(9)}">COMPRAR JÁ</a></div>
               </div>
-              <div class="card_8 card">
+              <div class="card_8 card lazy">
                 <div class="layer"></div>
                 <div class="content_category">Alquitarras</div>
                 <div class="buy"><a href="{$link->getCategoryLink(10)}">COMPRAR JÁ</a></div>
               </div>
-              <div class="card_9 card">
+              <div class="card_9 card lazy">
                 <div class="layer"></div>
                 <div class="content_category">Alambiques Profissionais</div>
                 <div class="buy"><a href="{$link->getCategoryLink(11)}">COMPRAR JÁ</a></div>
@@ -88,6 +88,7 @@
                 Somos uma plataforma online dedicada a oferecer uma ampla variedade de produtos de destilaria para entusiastas, profissionais e curiosos em todo o mundo. Fundada em 2024, nossa missão é fornecer acesso fácil e conveniente a equipamentos, ingredientes e acessórios de qualidade para a produção artesanal de destilados.</p>
               </div>
               <div class="aboutus_img lazy">
+                {* <img  data-src="https://albinovieira.pt/wp-content/uploads/2023/11/foto-sobre-01.webp" class="lazy"/> *}
                 {* <img src="https://albinovieira.pt/wp-content/uploads/2023/11/foto-sobre-01.webp" style="width:100%"/> *}
               </div>
             </div>
