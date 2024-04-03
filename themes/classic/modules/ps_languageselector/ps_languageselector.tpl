@@ -49,7 +49,7 @@
 </div> *}
 <div id="_desktop_language_selector">
   <div class="language-selector-wrapper">
-    <span id="language-selector-label" class="hidden-md-up">{l s='Language:' d='Shop.Theme.Global'}</span>
+    {* <span id="language-selector-label" class="hidden-md-up">{l s='Language:' d='Shop.Theme.Global'}</span> *}
     <div class="language-selector dropdown js-dropdown">
       {* <button data-toggle="dropdown" class="hidden-sm-down btn-unstyle" aria-haspopup="true" aria-expanded="false" aria-label="{l s='Language dropdown' d='Shop.Theme.Global'}" style="cursor: pointer;"> *}
         {* <img src="/img/flags/{$current_language.iso_code}.svg" width="30" height="auto" alt="{$current_language.iso_code}" /> *}

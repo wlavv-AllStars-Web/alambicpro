@@ -39,7 +39,7 @@
           </div>
           <div class="float-xs-right" id="_mobile_cart"></div>
           <div class="float-xs-right" id="_mobile_user_info"></div>
-          <div class="top-logo" id="_mobile_logo"></div>
+          <div class="top-logo"><a href="/"><img src="/themes/classic/assets/css/alambicprologo_1.svg" width="24" height="24" /></a></div>
           <div class="clearfix"></div>
         </div>
       </div>
@@ -59,7 +59,25 @@
         </div>
       </div>
       <div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display:none;">
-        <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
+        <div class="js-top-menu mobile" id="_mobile_top_menu">
+        <ul class="menu_list">
+          <li class="menu-item active"><a href="/">Home</a></li>
+          <li class="menu-item"><a href="/#aboutus">About Us</a></li>
+          
+          <li class="menu-item dropdown {if $currentUrl === $link->getCategoryLink(2)}active{/if}">
+            <div class="dropbtn" onclick="clickdropdown(this)"><a>{l s='Products' d='Shop.Theme.Global'}</a> <i class="fa-solid fa-caret-down"></i></div>
+            <ul class="dropdown-content">
+              {foreach from=$categories[2] item=category}
+                {* {"/"|cat:$currentLanguage|cat:"/"|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite} *}
+              <li><a class="{if $smarty.server.REQUEST_URI === "/"|cat:$currentLanguage|cat:"/"|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite}activeLink{/if}" href="{$category.infos.id_category}-{$category.infos.link_rewrite}">{$category.infos.name}</a></li>
+              {/foreach}
+              <li><a href="{$categories[1][2]['infos']['id_category']}-{$categories[1][2]['infos']['link_rewrite']}">All</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a>(Em Falta)</a></li>
+          <li class="menu-item"><a href="{$link->getPageLink('contact', true)}">Contact</a></li>
+        </ul>
+        </div>
         <div class="js-top-menu-bottom">
           <div id="_mobile_currency_selector"></div>
           <div id="_mobile_language_selector"></div>

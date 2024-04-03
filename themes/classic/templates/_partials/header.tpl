@@ -59,7 +59,7 @@
           </div>
           <div class="float-xs-right" id="_mobile_cart"></div>
           <div class="float-xs-right" id="_mobile_user_info"></div>
-          <div class="top-logo" id="_mobile_logo"></div>
+          <div class="top-logo" id="_mobile_logo"><a href="/"><img src="/themes/classic/assets/css/alambicprologo_1.svg" width="24" height="24" style="height:4rem;"/></a></div>
           <div class="clearfix"></div>
         </div>
       </div>
@@ -74,19 +74,21 @@
         <div class="col-md-2 hidden-sm-down" id="_desktop_logo">
           {if $shop.logo_details}
             {if $page.page_name == 'index'}
-              <h1 class="header-top-logo" class="hidden-sm-down">
+              <h1 class="header-top-logo hidden-sm-down">
                 {* {renderLogo} *}
-                {* <img src="/themes/classic/assets/css/whisky-still-30.png" width="24" height="24" /> *}
-                <a href="/">ALAMBIC PRO</a>
+                <a href="/"><img src="/themes/classic/assets/css/alambicprologo_2.svg" width="24" height="24" /></a>
+                {* <a href="/">ALAMBIC PRO</a> *}
                 
               </h1>
-              <h1 class="hidden-md-up">
-                {* {renderLogo}  *}
+              <h1 class="header-top-logo hidden-md-up">
+              <a href="/"><img src="/themes/classic/assets/css/alambicprologo_1.svg" width="24" height="24" style="height:4rem;"/></a>
               </h1>
             {else}
-              {* {renderLogo} *}
-              <h1 class="header-top-logo" class="hidden-sm-down">
-              <a href="/">ALAMBIC PRO</a>
+              <h1 class="header-top-logo hidden-sm-down">
+              <a href="/"><img src="/themes/classic/assets/css/alambicprologo_2.svg" width="24" height="24" /></a>
+              </h1>
+              <h1 class="header-top-logo hidden-md-up">
+              <a href="/"><img src="/themes/classic/assets/css/alambicprologo_1.svg" width="24" height="24" style="height:4rem;"/></a>
               </h1>
             {/if}
           {/if}
@@ -130,6 +132,7 @@
                 {* {"/"|cat:$currentLanguage|cat:"/"|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite} *}
               <li><a class="{if $smarty.server.REQUEST_URI === "/"|cat:$currentLanguage|cat:"/"|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite}activeLink{/if}" href="{$category.infos.id_category}-{$category.infos.link_rewrite}">{$category.infos.name}</a></li>
               {/foreach}
+              <li><a href="{$categories[1][2]['infos']['id_category']}-{$categories[1][2]['infos']['link_rewrite']}">All</a></li>
             </ul>
           </li>
           <li class="menu-item"><a>(Em Falta)</a></li>

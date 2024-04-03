@@ -24,6 +24,8 @@
     --text-color1-100: #2f261cd1;
     --text-color1-200: #6b6157;
     --text-color1-300: #796d5f;
+    --text-color1-400: #9f8f7d;
+    --text-color1-500: #c5b19b;
 
 }
 body,html{
@@ -35,13 +37,21 @@ body,html{
 }
 
 main {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: #f6f6f6;
 }
 
+#header .header-top .container .row:first-of-type {
+  justify-content: center;
+}
+#header .header-top .container .row .header-top-logo img {
+  /* max-height: 96px; */
+  height: auto;
+  width: 175px;
+}
 
 #index #wrapper {
     min-height: 60dvh;
@@ -938,6 +948,15 @@ input[type="checkbox"] {
   outline: 1px solid var(--text-color1);
 }
 
+/* contact page */
+
+#contact .contact-rich {
+  color: var(--text-color1-200);
+}
+#contact .contact-rich .data{
+  color: var(--text-color1);
+}
+
 /* responsive layout */
 
   
@@ -1054,6 +1073,16 @@ input[type="checkbox"] {
   #js-product-list .products {
     justify-content: start;
   }
+
+  #cart .cart-grid{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  #cart .cart-grid .cart-grid-body{
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1062,11 +1091,111 @@ input[type="checkbox"] {
   }
   #header .header-nav {
     background: var(--text-color1-200);
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     max-height: fit-content;
   }
   .header-top-logo{
     height: fit-content;
+  }
+
+  #_mobile_language_selector {
+    background: var(--text-color1-100);
+  }
+
+  #mobile_top_menu_wrapper {
+    padding: 0 !important;
+  }
+  #mobile_top_menu_wrapper .menu_list{
+    padding: 0;
+    gap: 0 !important;
+  }
+  #mobile_top_menu_wrapper .menu_list .menu-item{
+    /* background: #f6f6f6; */
+    height: 50px;
+    display: flex !important;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  #mobile_top_menu_wrapper .menu_list .menu-item a{
+    width: 100%;
+  }
+  #mobile_top_menu_wrapper .menu_list .menu-item.active{
+    background: var(--text-color1-200);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    position: relative;
+  }
+  #mobile_top_menu_wrapper .menu_list .menu-item.active a{
+    color: #f6f6f6;
+    text-decoration: none;
+    
+  }
+  #mobile_top_menu_wrapper .menu_list .menu-item.active::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 1rem;
+    background-image: url('whisky-still-30.png');
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #checkout .top-logo {
+    min-height: 80px;
+  }
+  #checkout .top-logo img{
+    height: auto;
+  width: 94px;
+  background: var(--text-color1-300);
+  max-height: unset;
+  }
+
+
+  #header .header-top-logo {
+    background: #918578 !important;
+    padding: 0.5rem;
+    overflow: hidden;
+    border-radius: 0;
+    height: 80px;
+  }
+  #header .header-top-logo img{
+    max-height: unset;
+    height: auto;
+    width: 94px;
+    object-fit: cover;
+  }
+
+  #header .header-nav #menu-icon {
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+
+  #header .header-nav #menu-icon .material-icons {
+    line-height: inherit;
+  }
+
+  #header .header-nav #_mobile_user_info {
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+  #header .header-nav .user-info{
+    margin-top: 0;
+  }
+
+  #header .header-nav #_mobile_cart {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+
+  #header .header-nav .blockcart .header{
+    margin-top: 0;
   }
 
   .header-top-logo a{
@@ -1295,12 +1424,15 @@ input[type="checkbox"] {
   }
 
   .dropdown-content li a{
-    color: var(--text-color1-100) !important;
+    color: #f6f6f6 !important;
   }
 
   .dropdown .active{
     max-height: none;
-    width: 100%;
+    width: 93%;
+    background: var(--text-color1-200) !important;
+    top: 2.5rem;
+    
   }
 
   .dropdown:hover .dropdown-content{
@@ -1319,13 +1451,22 @@ input[type="checkbox"] {
     transform: translateY(-50%);
   }
 
+  #_mobile_top_menu {
+    /* background: var(--text-color1-500); */
+    flex: 1;
+  }
+
   #mobile_top_menu_wrapper {
     padding: 15px;
     background: #f6f6f6;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    /* gap: 4rem; */
+    height: 87dvh;
   }
+  /* #mobile_top_menu_wrapper .js-top-menu-bottom{
+    margin-top: auto;
+  } */
 
   #product .tabs .nav-tabs {
     display: flex;
@@ -1385,7 +1526,7 @@ input[type="checkbox"] {
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 580px) {
   .footer-after {
     flex-direction: column-reverse;
   }

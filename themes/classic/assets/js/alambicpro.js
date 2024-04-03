@@ -21,6 +21,7 @@ function smoothScroll(event) {
 
 
 function clickdropdown(e) {
+  if(window.screen.width < 769  && isTouchDevice()) {
     const dropdown = e.nextElementSibling;
     dropdown.classList.toggle('active');
 
@@ -30,6 +31,11 @@ function clickdropdown(e) {
             dropdown.classList.remove('active');
         }
     });
+  }
+}
+
+function isTouchDevice() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
 // addEventListener("scroll", (event) => {
