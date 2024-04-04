@@ -1,0 +1,1581 @@
+:root {
+    --primary: #C08C00;
+    --primary-100: #c08d00a5;
+    --bg: #f6f6f6;
+    --shadow-1: #FAF7F2;
+    --shadow-2: #F5EBE0;
+    --shadow-3: #F6F3EF;
+    --shadow-4: #FFF7EE;
+    --back-color: #FFFBF6;
+    --shadow-2-100: #f5ebe0a1;
+    --brown: #2F261C;
+    --green: #7BC500;
+    --black: #333333;
+    --border: #EBEBEB;
+    --fs: 1rem;
+    --fs-s: 1.15rem;
+    --fs-m: 1.25rem;
+    --fs-l: 1.5rem;
+    --fs-xl: 2rem;
+    --box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.47);
+    --box-shadow2: 9px 10px 14px rgba(0, 0, 0, 0.37);
+    --family-1: 'Lato';
+    --text-color1: #2f261c;
+    --text-color1-100: #2f261cd1;
+    --text-color1-200: #6b6157;
+    --text-color1-300: #796d5f;
+    --text-color1-400: #9f8f7d;
+    --text-color1-500: #c5b19b;
+
+}
+body,html{
+    color: var(--text-color1) !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: var(--fs);
+    scroll-behavior: smooth;
+}
+
+main {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f6f6f6;
+}
+
+#header .header-top .container .row:first-of-type {
+  justify-content: center;
+}
+#header .header-top .container .row .header-top-logo img {
+  /* max-height: 96px; */
+  height: auto;
+  width: 175px;
+}
+
+#index #wrapper {
+    min-height: 60dvh;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+}
+
+#header {
+  box-shadow: none !important;
+}
+
+#header::after{
+  position: absolute;
+  content: '';
+  width: 60%;
+  height: 1px;
+  background: var(--text-color1-100);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+#header .header-top .header-top-right{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+}
+
+#header .header-nav {
+  background: var(--text-color1-100);
+}
+
+#header .header-nav .language-selector {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#header .header-top{
+    background: #f6f6f6;
+}
+
+#header .header-top .header-top-right .header_top_icons{
+    display: flex;
+    gap: 1.5rem;
+}
+#header .whatsapp_content{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 50px;
+}
+#header .whatsapp_number a{
+    color: #fff;
+    font-size: var(--fs-s);
+}
+#header .whatsapp_number a:hover{
+    text-decoration: 2px underline #fff;
+}
+#header  .whatsapp_logo{
+    transition: all 0.25s;
+}
+#header .whatsapp_logo:hover{
+    transform: scale(0.92);
+}
+
+#header  .whatsapp_logo img{
+  width: 40px;
+  height: auto;
+}
+
+#_desktop_logo{
+  width: auto;
+}
+
+.header-top-logo {
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: var(--text-color1);
+  font-size: 1.84rem;
+  font-family: Verdana;
+  width: max-content;
+}
+
+#header .menu {
+    display: flex;
+    justify-content: center;
+}
+#header .menu .menu_list{
+    display: flex;
+    gap: 2rem;
+    font-size: var(--fs-s);
+    margin: 0;
+}
+#header .menu .menu_list .menu-item a{
+    color: var(--text-color1-100);
+    font-weight: 600;
+    padding: 0.85rem 0;
+}
+#header .menu .menu_list .menu-item a:focus{
+  text-decoration: 3px underline var(--text-color1-100) !important;
+}
+#header .menu .menu_list .menu-item:hover{
+    color: var(--text-color1);
+    text-decoration: 3px underline var(--text-color1-100);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#header .menu .menu_list .menu-item.active{
+    text-decoration: 3px underline var(--text-color1-100)
+}
+
+.blockcart {
+    position: relative;
+    /* background: var(--primary); */
+    color: var(--text-color1-100);
+    padding: 0.65rem;
+    border-radius: 50%;
+}
+
+.blockcart i{
+    font-size: var(--fs-l);
+}
+
+.blockcart a:hover{
+  color: var(--text-color1-100) !important;
+}
+
+
+
+.blockcart.inactive {
+    /* background: var(--primary-100); */
+}
+
+.remove-from-cart:hover{
+  color: var(--text-color1-300) !important;
+}
+
+#subcategories ul li .subcategory-name:hover, .block-categories .arrows .arrow-down:hover, .block-categories .arrows .arrow-right:hover, .block-categories .collapse-icons .add:hover, .block-categories .collapse-icons .remove:hover, .cart-grid-body a.label:hover {
+  color: var(--text-color1-200)
+}
+
+.blockcart .cart-products-count{
+    position: absolute;
+    left: 24px;
+    bottom: 5px;
+    color: #fff !important;
+    font-weight: 900;
+    background: var(--text-color1-300);
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-size: 0.85rem;
+    line-height: 14px;
+}
+
+.blockcart.active:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.blockcart.active:hover .cart-products-count{
+    color: var(--primary);
+}
+
+#_desktop_user_info {
+    display: flex;
+    align-items: center;
+    
+}
+
+#_desktop_user_info i {
+    font-size: var(--fs-l);
+}
+
+#_desktop_user_info .user-info {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+#_desktop_user_info a {
+    color: var(--text-color1);
+    /* padding: 0.65rem; */
+    /* background: var(--text-color1); */
+    border-radius: 50%;
+}
+
+#_desktop_user_info a:hover{
+    /* background: white; */
+    color: var(--text-color1-100) !important;
+    cursor: pointer;
+}
+
+#_desktop_language_selector .language-selector ul{
+  display: flex;
+  margin: 0;
+}
+
+#_desktop_language_selector {
+    display: flex;
+    align-items: center;
+}
+#_desktop_language_selector img{
+    border: 1px solid var(--text-color1);
+    border-radius: 0.15rem;
+}
+#_desktop_language_selector img:hover{
+    outline: 2px solid var(--shadow-2);
+}
+
+#_desktop_language_selector .current img {
+  outline: 2px solid var(--shadow-2);
+}
+
+#footer{
+    padding: 1rem !important;
+    background: var(--text-color1-200);
+}
+
+.block-social {
+  display: flex;
+  justify-content: end;
+  margin-right: 3rem;
+}
+
+.block-social ul{
+  gap: 1rem;
+  align-items: center;
+}
+
+.block-social ul li {
+  background-color: var(--text-color1-100);
+  border-radius: 10px;
+}
+
+.block-social ul li:hover {
+  background-color: var(--text-color1-100);
+  transform: scale(0.95);
+}
+
+.footer-after {
+  display: flex;
+  align-items: center;
+}
+.footer-after .whatsapp_content:hover{
+  transform: scale(0.95);
+}
+
+#footer .copyrights {
+  color: var(--text-color1);
+  font-weight: 700;
+}
+#footer .copyrights:hover {
+  text-decoration: underline 1px var(--text-color1);
+}
+
+.footer-container {
+  padding: 1rem 0 !important;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.copyright-container {
+  margin-top: 1rem;
+}
+
+#footer_sub_menu_1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#footer_sub_menu_1 li {
+    width: 25%;
+    padding: 0.5rem;
+}
+
+#footer_sub_menu_1 li a{
+    font-size: var(--fs);
+    color: #fff;
+    position: relative;
+}
+#footer_sub_menu_1 li a:hover{
+    text-decoration: 2px underline #fff;
+}
+#footer_sub_menu_1 li a:hover::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -35px;
+    background-image: url('whisky-still-30_white.png');
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.footer_row {
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+  
+  .grid .card {
+    width: 100%;
+    height: 0%;
+    padding-bottom: 100%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+  }
+
+  /* .grid .card_1{
+    background-image: url("https://www.maritastills.es/img/cms/destila_2.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .grid .card_2{
+    background-image: url("https://albinovieira.pt/wp-content/uploads/2023/07/destilarias_1920x.webp");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .grid .card_3{
+    background-image: url("https://albinovieira.pt/wp-content/uploads/2023/11/alambiques-cat-1500x1500-1.webp");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .grid .card_4{
+    background-image: url("https://images.pexels.com/photos/6752421/pexels-photo-6752421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .grid .card_5{
+    background-image: url("https://www.maritastills.es/img/cms/destila_2.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .grid .card_6{
+    background-image: url("https://albinovieira.pt/wp-content/uploads/2023/07/destilarias_1920x.webp");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .grid .card_7{
+    background-image: url("https://www.maritastills.es/img/cms/destila_2.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .grid .card_8{
+    background-image: url("https://albinovieira.pt/wp-content/uploads/2023/07/destilarias_1920x.webp");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .grid .card_9{
+    background-image: url("https://albinovieira.pt/wp-content/uploads/2023/11/alambiques-cat-1500x1500-1.webp");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  } */
+  .grid .layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .grid .content_category{
+    position: absolute;
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    z-index: 2;
+
+    color: rgba(250, 250, 250, 1);
+    font-size: var(--fs-xl);
+    font-weight: 700;
+
+    padding: 1rem;
+    line-height: 42px;
+    text-align: center;
+
+  }
+  .grid .buy{
+    position: absolute;
+    bottom: 1rem ;
+    left: 1rem ;
+    color: var(--text-color1);
+    background: white;
+    padding: 0.5rem 1rem;
+    z-index: 4;
+    border-radius: 10px;
+    outline: 2px solid white;
+    transition: all 0.25s;
+  }
+  
+  .grid .buy:hover{
+    /* transform: scale(0.98); */
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    outline: 2px solid white;
+  }
+
+  .grid .buy a {
+    color: var(--text-color1) !important;
+  }
+  .grid .buy:hover a {
+    color: #fff !important;
+  }
+
+  .product-container.js-product-container{
+    padding: 2rem 1rem;
+    background: #fff;
+  }
+
+  .btn-primary {
+    background: var(--text-color1-100);
+  }
+  .btn-primary:hover {
+    background: var(--text-color1-200);
+  }
+
+  .tabs .nav-tabs .nav-link.active{
+    color: var(--text-color1-100);
+  }
+
+  .tabs .nav-tabs .nav-link.active, .tabs .nav-tabs .nav-link:hover{
+    border-bottom: var(--text-color1-100) 3px solid;
+  }
+
+  .product-price {
+    color: var(--text-color1-100);
+  }
+
+  .product-images > li.thumb-container .thumb.selected, .product-images > li.thumb-container .thumb:hover {
+    border: var(--text-color1-100) 3px solid;
+  }
+  
+  a{
+    color: var(--text-color1-100);
+  }
+  a:hover{
+    color: var(--text-color1-200);
+  }
+
+  #header a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #blockcart-modal .product-name {
+    font-size: 1.125rem;
+    color: var(--text-color1-100);
+  }
+
+
+  .dropbtn {
+    color: var(--text-color1-100);
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    transition: 0.3s;
+  }
+
+  .dropbtn a {
+    color: var(--text-color1-100) !important;
+  }
+  .dropbtn a:hover {
+    color: var(--text-color1) !important;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block !important;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: all 1s;
+    border-radius: 10px;
+    top: 2.25rem;
+    padding: 1rem 0;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block ;
+    width: max-content;
+    background: var(--text-color1-200);
+  }
+  
+  .dropdown-content li {
+    color: #fff ;
+    background: transparent;
+    height: fit-content;
+    text-decoration: none;
+    display: flex;
+    max-width: none;
+    padding: 0.2rem 2.5rem;
+    cursor: auto;
+    position: relative;
+  }
+  
+  .dropdown-content li a{
+    background: transparent;
+    width: fit-content;
+    color: #fff !important;
+    padding: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    
+  }
+  .dropdown-content li a:hover{
+    color: #fff;
+    text-decoration: 2px underline #fff !important;
+    cursor: pointer;
+  }
+
+  .dropdown-content li a:hover::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 5px;
+    background-image: url('whisky-still-30_white.png');
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .activeLink {
+    text-decoration: 2px underline #fff;
+  }
+  .activeLink::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 5px;
+    background-image: url('whisky-still-30_white.png');
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #category .block-category {
+    background: #f6f6f6;
+    min-height: unset;
+  }
+
+  #category #subcategories {
+    display: none !important;
+  }
+
+  #aboutus {
+    margin: 6rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    border-radius: 10px;
+  }
+
+  .content_aboutus {
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+    left: 2rem;
+    top: 2rem;
+  }
+
+
+  #aboutus h1 {
+    font-size: var(--fs-l);
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  #aboutus p {
+    color: #fff;
+    background: var(--text-color1-200);
+    padding: 3rem;
+    border-radius: 10px;
+    font-size: var(--fs-s);
+    font-weight: 500;
+    margin-top: 2rem;
+    line-height: 25px;
+    box-shadow: var(--box-shadow2);
+    height: 220px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  #aboutus p::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 1rem;
+    background-image: url('whisky-still-30_white.png');
+    top: 1rem;
+}
+.card.lazy{
+  background-image: none;
+   background-color: var(--text-color1-200);
+}
+.aboutus_img.lazy{
+  background-image: none;
+   background-color: #F1F1FA;
+}
+.aboutus_img {
+  width: 100%;
+  background-image: url("https://albinovieira.pt/wp-content/uploads/2023/11/foto-sobre-01.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+  #ourphilosophy {
+    margin: 4rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    border-radius: 10px;
+    margin-left: auto;
+  }
+
+  #ourphilosophy h1 {
+    font-size: var(--fs-l);
+    text-transform: uppercase;
+    text-align: end;
+    color: #fff;
+  }
+
+  #ourphilosophy p {
+    color: #fff;
+    background: var(--text-color1-300);
+    padding: 3rem;
+    border-radius: 10px;
+    font-size: var(--fs-s);
+    font-weight: 500;
+    margin-top: 2rem;
+    line-height: 25px;
+    box-shadow: var(--box-shadow2);
+    height: 220px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  #ourphilosophy p::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 1rem;
+    background-image: url('whisky-still-30_white.png');
+    top: 1rem;
+}
+
+.content_ourphilosophy {
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  right: 2rem;
+  top: 2rem;
+}
+
+.ourphilosophy_img {
+  width: 100%;
+  background-image: url("https://albinovieira.pt/wp-content/uploads/2023/11/produtos_4_1920x.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ourphilosophy_img.lazy{
+  background-image: none;
+   background-color: #F1F1FA;
+}
+
+  #ourmission {
+    margin: 4rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    border-radius: 10px;
+  }
+
+  #ourmission h1 {
+    font-size: var(--fs-l);
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  #ourmission p {
+    color: #fff;
+    background: var(--text-color1-200);
+    padding: 3rem;
+    border-radius: 10px;
+    font-size: var(--fs-s);
+    font-weight: 500;
+    margin-top: 2rem;
+    line-height: 25px;
+    box-shadow: var(--box-shadow2);
+    height: 220px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  #ourmission p::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 1rem;
+    background-image: url('whisky-still-30_white.png');
+    top: 1rem;
+}
+
+.content_ourmission {
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  left: 2rem;
+  top: 2rem;
+}
+
+.ourmission_img {
+  width: 100%;
+  background-image: url("https://albinovieira.pt/wp-content/uploads/2023/11/foto-sobre-06.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ourmission_img.lazy{
+  background-image: none;
+   background-color: var(--text-color1-100);
+}
+
+.quickview .images-container {
+  position: relative;
+}
+
+.quickview .arrows {
+  display: flex;
+}
+
+.product-miniature .highlighted-informations .quick-view:hover {
+  color: var(--text-color1);
+}
+
+.btn-primary.active, .btn-primary:active, .open > .btn-primary.dropdown-toggle {
+  background-color: var(--text-color1) !important;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  background-color: var(--text-color1) !important;
+}
+
+.custom-radio input[type="radio"]:checked + span {
+  background-color: var(--text-color1-100) !important;
+}
+.form-control{
+  color: var(--text-color1-100);
+}
+
+.form-control:focus {
+  color: #232323;
+  background-color: #fff;
+  outline: .1875rem solid var(--text-color1-100) ; 
+  border-color: var(--text-color1-100);
+}
+
+input[type="checkbox"] {
+  accent-color: var(--text-color1-100) !important;
+}
+
+/* contact page */
+#contact #content-wrapper #content{
+  background: #f6f6f6;
+  position: relative;
+}
+#contact #content-wrapper #content::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 50%;
+  width: 1px;
+  background-color: var(--text-color1-200);
+}
+#contact #content-wrapper #content::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 50%;
+  background-color: var(--text-color1-200);
+}
+
+.contact-form {
+  background: #f6f6f6;
+}
+
+#products .up {
+  position: fixed;
+  display: none;
+  z-index: 3;
+}
+
+#products .up .btn-secondary {
+  color: #fff;
+  background: var(--text-color1);
+  border-radius: 50%;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-top {
+  position: fixed;
+  background: var(--text-color1);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.touchspin-up,
+.touchspin-down {
+  color: var(--text-color1-100);
+}
+
+/* .footer-container .whatsapp_content{
+  display: none;
+} */
+
+.product-miniature .product-description{
+  background: #f6f6f6;
+}
+
+.product-miniature .product-price-and-shipping {
+  font-weight: 700;
+  color: var(--text-color1-100);
+  text-align: center;
+}
+
+.product-miniature .product-title{
+  text-transform: uppercase;
+}
+
+.btn-comment {
+  background-color: var(--text-color1-200);
+}
+
+#post-product-comment-form input:focus-visible,#post-product-comment-form textarea:focus-visible{
+  outline: 1px solid var(--text-color1);
+}
+
+/* contact page */
+
+#contact .contact-rich {
+  color: var(--text-color1-200);
+}
+#contact .contact-rich .data{
+  color: var(--text-color1);
+}
+#my-account .links a:hover i {
+  color: var(--text-color1) !important;
+}
+#my-account .links a:hover span {
+  color: var(--text-color1) !important;
+  text-decoration: underline 1px;
+}
+#my-account .links a i {
+  color: var(--text-color1-100) !important;
+}
+#my-account .links a span {
+  color: var(--text-color1-100) !important;
+}
+
+/* responsive layout */
+
+  
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    
+  }
+}
+@media (max-width: 992px) {
+  .container {
+      width: 100%;
+      max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width:1200px) {
+
+  .footer_row {
+    width: 100%;
+  }
+  .footer-after {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header-top .row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .header-top .row .menu{
+    width: 100%;
+  }
+
+  #_desktop_logo h1 a{
+    color: var(--text-color1);
+  }
+
+  #aboutus {
+    height: 380px;
+  }
+  #aboutus .content_aboutus {
+    width: 70%;
+  }
+  #aboutus .content_aboutus p{
+    height: 260px;
+  }
+
+  #ourphilosophy{
+    height: 380px;
+  }
+  #ourphilosophy .content_ourphilosophy {
+    width: 70%;
+  }
+  #ourphilosophy .content_ourphilosophy p{
+    height: 260px;
+  }
+
+  #ourmission {
+    height: 380px;
+  }
+  #ourmission .content_ourmission {
+    width: 70%;
+  }
+  #ourmission .content_ourmission p{
+    height: 260px;
+  }
+
+  .footer-container .container-md div:first-child {
+    flex-direction: column;
+  } 
+  .footer-container .container-md .footer_row .links {
+    width: 100%;
+    padding: 0;
+  } 
+  .footer-container .container-md .footer_row .links .wrapper{
+    width: 100%;
+  } 
+
+  #footer_sub_menu_1 li {
+    width: 25%;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+
+  .footer-container li {
+    margin-bottom: .8125rem;
+  }
+
+  .header-top .header-top-right {
+    width: auto;
+  }
+
+  .dropdown .active {
+    max-height: unset;
+    overflow-y: hidden;
+    visibility: visible;
+    display: block !important;
+    width: max-content;
+  }
+
+  .dropdown-content li a {
+    color: var(--text-color1) !important;
+  }
+
+  .dropdown:hover .dropdown-content {
+    background: #fff;
+  }
+
+  #header .menu .menu_list .menu-item a:hover{
+    text-decoration: underline 1px var(--text-color1) !important;
+  }
+
+  #js-product-list .products {
+    justify-content: start;
+  }
+
+  #cart .cart-grid{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  #cart .cart-grid .cart-grid-body{
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  #header .header-nav {
+    background: var(--text-color1-200);
+    /* padding: 0.5rem; */
+    max-height: fit-content;
+  }
+  .header-top-logo{
+    height: fit-content;
+  }
+
+  #_mobile_language_selector {
+    background: var(--text-color1-100);
+  }
+
+  #mobile_top_menu_wrapper {
+    padding: 0 !important;
+  }
+  #mobile_top_menu_wrapper .menu_list{
+    padding: 0;
+    gap: 0 !important;
+  }
+  #mobile_top_menu_wrapper .menu_list .menu-item{
+    /* background: #f6f6f6; */
+    height: 50px;
+    display: flex !important;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  #mobile_top_menu_wrapper .menu_list .menu-item a{
+    width: 100%;
+  }
+  #mobile_top_menu_wrapper .menu_list .menu-item.active{
+    background: var(--text-color1-200);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    position: relative;
+  }
+  #mobile_top_menu_wrapper .menu_list .menu-item.active a{
+    color: #f6f6f6 !important;
+    text-decoration: none !important;
+    
+  }
+  #mobile_top_menu_wrapper .menu_list .menu-item.active::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 1rem;
+    background-image: url('whisky-still-30.png');
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #checkout .top-logo {
+    min-height: 80px;
+  }
+  #checkout .top-logo img{
+    height: auto;
+  width: 94px;
+  background: var(--text-color1-300);
+  max-height: unset;
+  }
+
+
+  #header .header-top-logo {
+    background: #918578 !important;
+    padding: 0.5rem;
+    overflow: hidden;
+    border-radius: 0;
+    height: 80px;
+  }
+  #header .header-top-logo img{
+    max-height: unset;
+    height: auto;
+    width: 94px;
+    object-fit: cover;
+  }
+
+  #header .header-nav #menu-icon {
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+
+  #header .header-nav #menu-icon .material-icons {
+    line-height: inherit;
+  }
+
+  #header .header-nav #_mobile_user_info {
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+  #header .header-nav .user-info{
+    margin-top: 0;
+  }
+
+  #header .header-nav #_mobile_cart {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+
+  #header .header-nav .blockcart .header{
+    margin-top: 0;
+  }
+
+  .header-top-logo a{
+    color: #fff !important;
+    font-size: 1.25rem;
+  }
+
+  #header .header-nav .cart-preview.active {
+    background: var(--text-color1);
+  }
+
+  #_mobile_user_info .user-info {
+    margin-left: 0;
+  }
+
+  #_mobile_user_info .user-info a {
+    color: #fff;
+  }
+
+  #menu-icon {
+    color: #fff;
+  }
+  
+  #aboutus {
+    flex-direction: column;
+    height: auto;
+  }
+  #aboutus .content_aboutus {
+    width: 100%;
+    position: inherit;
+    left: 0;
+    top: 0;
+  }
+  #aboutus .content_aboutus h1 {
+    color: var(--text-color1);
+  }
+  #aboutus .content_aboutus p {
+    padding: 1.25rem;
+    height: auto;
+    margin-bottom: 0;
+    border-radius: 10px 10px 0 0;
+  }
+  #aboutus .content_aboutus p::after {
+    display: none;
+  }
+  #aboutus .aboutus_img {
+    height: 320px;
+  }
+
+
+  #ourphilosophy {
+    flex-direction: column;
+    height: auto;
+  }
+  #ourphilosophy .content_ourphilosophy{
+    width: 100%;
+    position: inherit;
+    left: 0;
+    top: 0;
+  }
+  #ourphilosophy .content_ourphilosophy h1 {
+    color: var(--text-color1);
+    text-align: start;
+  }
+  #ourphilosophy .content_ourphilosophy p {
+    padding: 1.25rem;
+    height: auto;
+    margin-bottom: 0;
+    border-radius: 10px 10px 0 0;
+  }
+  #ourphilosophy .content_ourphilosophy p::after {
+    display: none;
+  }
+  #ourphilosophy .ourphilosophy_img{
+    height: 320px;
+  }
+
+
+  #ourmission {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #ourmission .content_ourmission {
+    width: 100%;
+    position: inherit;
+    left: 0;
+    top: 0;
+  }
+
+  #ourmission .content_ourmission h1 {
+    color: var(--text-color1);
+  }
+
+  #ourmission .content_ourmission p {
+    padding: 1.25rem;
+    height: auto;
+    margin-bottom: 0;
+    border-radius: 10px 10px 0 0;
+  }
+  #ourmission .content_ourmission p::after {
+    display: none;
+  }
+
+  #ourmission .ourmission_img {
+    height: 320px;
+  }
+
+  .footer-container .col-lg-12 {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #footer_sub_menu_1.collapse {
+    display: none;
+  }
+  #footer_sub_menu_1.collapse.in {
+    display: block;
+  }
+
+  .footer-container .links ul {
+    background-color: var(--text-color1-200);
+  }
+
+  #footer_sub_menu_1 li {
+    width: 100%;
+  }
+
+  #footer_sub_menu_1 li a:hover {
+    text-decoration: none;
+  }
+
+  .footer-container .footer-after {
+    margin-top: 2rem;
+    padding: 0;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-container .container-fluid{
+    padding: 0;
+  }
+
+  .footer-container .footer-after .block-social {
+    margin-right: 0;
+  }
+
+  .footer-container .footer-after .block-social ul{
+   flex-flow: nowrap;
+   margin-bottom: 0;
+  }
+  .footer-container .footer-after .block-social ul li{
+   margin-bottom: 0;
+  }
+
+  .copyright-container{
+    text-align: center;
+  }
+
+  #_mobile_top_menu ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #_mobile_top_menu ul li a{
+    font-size: 1.25rem;
+    color: var(--text-color1-100);
+  }
+
+  #_mobile_top_menu ul li.active a{
+    text-decoration: underline 1px var(--text-color1-100) !important;
+  }
+
+  #_mobile_top_menu ul li a:hover{
+    color: var(--text-color1-100);
+    text-decoration: underline 1px var(--text-color1-100) !important;
+  }
+  #_mobile_top_menu ul li a:focus{
+    text-decoration: underline 1px var(--text-color1-100) !important;
+  }
+
+  #_mobile_language_selector #language-selector-label{
+    color: var(--text-color1);
+  }
+
+  #_mobile_language_selector .language-selector{
+    width: 100%;
+  }
+
+  #_mobile_language_selector .language-selector ul{
+    display: flex !important;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  /* #_mobile_cart,#_mobile_user_info{
+    padding: 10px;
+  } */
+
+  .footer-container .wrapper .h3{
+    color: #fff;
+  }
+  .footer-container .links ul > li {
+    border-bottom: 1px solid var(--text-color1-100);
+  }
+  .links .title {
+    border-bottom: 1px solid var(--text-color1);
+  }
+
+  #header .header-nav .blockcart{
+    width: 3rem;
+  }
+
+  .blockcart .cart-products-count {
+    padding: 2px 4px;
+  }
+
+
+  .dropdown-content {
+    display: none !important;
+  }
+  .dropdown-content.active{
+    display: block !important;
+  }
+
+  .dropdown-content li a{
+    color: #f6f6f6 !important;
+  }
+
+  .dropdown .active{
+    max-height: none;
+    width: 93%;
+    background: var(--text-color1-200) !important;
+    top: 2.5rem;
+    
+  }
+
+  .dropdown:hover .dropdown-content{
+    background: #fff;
+  }
+
+
+  .activeLink::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 5px;
+    background-image: url('whisky-still-30.png');
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #_mobile_top_menu {
+    /* background: var(--text-color1-500); */
+    flex: 1;
+  }
+
+  #mobile_top_menu_wrapper {
+    padding: 15px;
+    background: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    /* gap: 4rem; */
+    height: 87dvh;
+  }
+  /* #mobile_top_menu_wrapper .js-top-menu-bottom{
+    margin-top: auto;
+  } */
+
+  #product .tabs .nav-tabs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-after .block-social {
+    display: flex;
+    justify-content: start;
+  }
+  .footer-after div:last-child {
+    width: 100%;
+  }
+
+  .footer-container .links .wrapper i {
+    color: #fff !important;
+  }
+
+  .footer-container .whatsapp_content{
+    display: block;
+  }
+  .footer-container .whatsapp_content .whatsapp_logo img{
+    width: 38px;
+  }
+  
+  .tabs {
+    padding: 1.25rem 1rem;
+  }
+
+  .ui-widget-content{
+    border: none !important;
+  }
+
+  #my-account .links a:hover i {
+    color: var(--text-color1-200) !important;
+  }
+  #my-account .links a i {
+    color: var(--text-color1-100) !important;
+  }
+
+  .btn.btn-primary.add-to-cart:focus {
+    background: var(--text-color1-100) !important;
+  }
+  .btn.btn-primary.add-to-cart:hover {
+    background: var(--text-color1-100) !important;
+  }
+
+  #cart .product-line-grid-right .product-price {
+    color: var(--text-color1-100);
+  }
+  #cart .cart-line-product-actions .remove-from-cart{
+    color: var(--text-color1-100);
+  }
+  #cart .product-line-actions .js-cart-line-product-quantity {
+    color: var(--text-color1-100);
+  }
+
+}
+
+@media (max-width: 580px) {
+  .footer-after {
+    flex-direction: column-reverse;
+  }
+
+  .footer-after div:last-child {
+    justify-content: center !important;
+  }
+}
+
+
+@media screen and (min-width:780px) {
+  #footer .links .wrapper .h3{
+      display: none;
+  }
+}
+
+
+
+
+
+/* ----------------------------------- */
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+    max-width: 100%;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    width: 1440px;
+    max-width: 100%;
+  }
+}
