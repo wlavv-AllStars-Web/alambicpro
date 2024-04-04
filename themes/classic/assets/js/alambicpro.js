@@ -35,7 +35,7 @@ function clickdropdown(e) {
 }
 
 function isTouchDevice() {
-  return /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(navigator.userAgent);
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
 // addEventListener("scroll", (event) => {
@@ -98,3 +98,40 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   })
   
+
+  // Function to toggle active class
+document.querySelectorAll('.menu_list .menu-item').forEach(item => {
+  item.addEventListener('click', function() {
+      // Remove active class from all links
+      console.log(item)
+      document.querySelectorAll('.menu_list .menu-item').forEach(link => {
+          link.classList.remove('active');
+      });
+      // Add active class to the clicked link
+      this.classList.add('active');
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Get all dropdown content <a> tags
+  var dropdownLinks = document.querySelectorAll(".dropdown-content a");
+  console.log(dropdownLinks)
+
+  // Check if any of the dropdown links have the class "activeLink"
+  var hasActiveLink = false;
+  dropdownLinks.forEach(function(link) {
+      if (link.classList.contains("activeLink")) {
+          hasActiveLink = true;
+          return;
+      }
+  });
+
+  // If any dropdown link has the class "activeLink", add the class "active" to the .menu-item.dropdown element
+  if (hasActiveLink) {
+      var dropdownItem = document.querySelectorAll(".menu-item.dropdown");
+      dropdownItem.forEach((item,i) => {
+        dropdownItem[1].classList.add("active");
+      });
+  }
+});

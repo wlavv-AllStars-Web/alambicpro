@@ -314,6 +314,8 @@ main {
 
 .footer-container {
   padding: 1rem 0 !important;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .copyright-container {
@@ -1128,8 +1130,8 @@ input[type="checkbox"] {
     position: relative;
   }
   #mobile_top_menu_wrapper .menu_list .menu-item.active a{
-    color: #f6f6f6;
-    text-decoration: none;
+    color: #f6f6f6 !important;
+    text-decoration: none !important;
     
   }
   #mobile_top_menu_wrapper .menu_list .menu-item.active::after{
