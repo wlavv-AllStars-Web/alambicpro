@@ -34,10 +34,12 @@
 </div>
 
 <div class="text-sm-center">
-  {if $tos_cms != false}
+  {* {if $tos_cms != false}
     <span class="d-block js-terms">{$tos_cms nofilter}</span>
-  {/if}
+  {/if} *}
   {block name='copyright_link'}
-    {l s='%copyright% %year% - Ecommerce software by %prestashop%' sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
+    <a class="copyrights" href="/" target="_blank" rel="noopener noreferrer nofollow">
+      {l s='%copyright% %year% - Alambic Pro' sprintf=['%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
+    </a>
   {/block}
 </div>

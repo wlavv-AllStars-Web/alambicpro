@@ -26,6 +26,19 @@
 <div class="js-product product{if !empty($productClasses)} {$productClasses}{/if}">
   <article class="product-miniature js-product-miniature" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
     <div class="thumbnail-container">
+    <div class="mini-add-to-cart" style="position: absolute;right:0;z-index:5;">
+      {if !$configuration.is_catalog}
+            <form action="{$urls.pages.cart}" method="post" class="add-to-cart-or-refresh" style="display: flex;
+            justify-content: end;">
+              <input type="hidden" name="token" value="{$static_token}">
+              <input type="hidden" name="id_product" value="{$product.id}" class="product_page_product_id">
+              <input type="hidden" name="qty" value="1">
+              <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" style="border-radius: 0 0 0 10px;" {if $product.quantity < 1 }disabled{/if}>
+               <i class="material-icons shopping-cart" style="margin-right: 0;">&#xE547;</i>
+              </button>
+            </form>
+          {/if}
+      </div>
       <div class="thumbnail-top">
         {block name='product_thumbnail'}
           {if $product.cover}

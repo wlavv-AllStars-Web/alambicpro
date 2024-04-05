@@ -52,7 +52,7 @@
             <div class="whatsapp_content hidden-sm-down">
               <div class="whatsapp_logo">
               <a href="https://wa.me/961234567" target="_blank" > 
-                <img src = "/themes/classic_child/assets/css/whatsapp.svg" alt="Whatsapp Logo"/>
+                <img src = "/themes/classic_child/assets/css/whatsapp_footer.svg" alt="Whatsapp Logo"/>
               </a>
               </div>
               <div class="whatsapp_number">
@@ -103,16 +103,16 @@
             {/if}
           {/if}
         </div>
-{* {"/"|cat:$currentLanguage|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite} *}
+
         <div class="menu col-md-8 hidden-sm-down">
           <ul class="menu_list">
             <li class="menu-item {if $currentUrl === $link->getPageLink('index',true)}active{/if}"><a href="/">{l s='Home' d='Shop.Theme.Alambic'}</a></li>
             <li class="menu-item"><a href="/#aboutus" onclick="smoothScroll(event)">{l s='About Us' d='Shop.Theme.Alambic'}</a></li>
-            <li class="menu-item dropdown {if $currentUrl === "/"|cat:$currentLanguage|cat:"/"|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite}active{/if}">
+            <li class="menu-item dropdown ">
               <div class="dropbtn" onclick="clickdropdown(this)"><a>{l s='Products' d='Shop.Theme.Alambic'}</a> <i class="fa-solid fa-caret-down"></i></div>
               <ul class="dropdown-content hidden-md-down">
                 {foreach from=$categories[2] item=category}
-                  {* {"/"|cat:$currentLanguage|cat:"/"|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite} *}
+
                 <li><a class="{if $smarty.server.REQUEST_URI === "/"|cat:$currentLanguage|cat:"/"|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite}activeLink{/if}" href="{$category.infos.id_category}-{$category.infos.link_rewrite}">{$category.infos.name}</a></li>
                 {/foreach}
                 <li><a href="{$categories[1][2]['infos']['id_category']}-{$categories[1][2]['infos']['link_rewrite']}">{l s='All' d='Shop.Theme.Alambic'}</a></li>
@@ -138,15 +138,27 @@
           <li class="menu-item dropdown {if $currentUrl === $link->getCategoryLink(2)}active{/if}">
             <div class="dropbtn" onclick="clickdropdown(this)"><a>{l s='Products' d='Shop.Theme.Alambic'}</a> <i class="fa-solid fa-caret-down"></i></div>
             <ul class="dropdown-content">
-              {foreach from=$categories[2] item=category key=key}
+              {foreach from=$categories[2] item=category}
                 {* {"/"|cat:$currentLanguage|cat:"/"|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite} *}
               <li><a class="{if $smarty.server.REQUEST_URI === "/"|cat:$currentLanguage|cat:"/"|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite}activeLink{/if}" href="{$category.infos.id_category}-{$category.infos.link_rewrite}">{$category.infos.name}</a></li>
               {/foreach}
-              <li><a class="{if $smarty.server.REQUEST_URI === "/"|cat:$currentLanguage|cat:"/"|cat:$category.infos.id_category|cat:"-"|cat:$category.infos.link_rewrite}activeLink{/if}" href="{$categories[1][2]['infos']['id_category']}-{$categories[1][2]['infos']['link_rewrite']}">{l s='All' d='Shop.Theme.Alambic'}</a></li>
+              <li><a href="{$categories[1][2]['infos']['id_category']}-{$categories[1][2]['infos']['link_rewrite']}">{l s='All' d='Shop.Theme.Alambic'}</a></li>
             </ul>
           </li>
           <li class="menu-item"><a>{l s='(Em falta)' d='Shop.Theme.Alambic'}</a></li>
           <li class="menu-item {if $currentUrl === $link->getPageLink('contact', true)}active{/if}"><a href="{$link->getPageLink('contact', true)}">{l s='Contact' d='Shop.Theme.Alambic'}</a></li>
+          <li class="menu-item">
+          <div class="whatsapp_content">
+            <div class="whatsapp_logo">
+            <a href="https://wa.me/961234567" target="_blank" > 
+              <img src = "/themes/classic_child/assets/css/whatsapp_footer.svg" alt="Whatsapp Logo"/>
+            </a>
+            </div>
+            <div class="whatsapp_number">
+              <a href="https://wa.me/961234567" target="_blank" style="color: var(--text-color1);">{l s='961234567' d='Shop.Theme.Alambic'}</a>
+            </div>
+          </div>
+          </li>
         </ul>
         </div>
         <div class="js-top-menu-bottom">

@@ -142,6 +142,7 @@
                 type="number"
                 inputmode="numeric"
                 pattern="[0-9]*"
+                min="1"
                 value="{$product.quantity}"
                 name="product-quantity-spin"
                 aria-label="{l s='%productName% product quantity field' sprintf=['%productName%' => $product.name] d='Shop.Theme.Checkout'}"

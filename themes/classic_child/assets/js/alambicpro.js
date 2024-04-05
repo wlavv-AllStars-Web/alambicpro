@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
           imageObserver.unobserve(image);
         }
       });
-    });
+    },{rootMargin: "100px"});
 
     lazyloadImages.forEach(function(image) {
       imageObserver.observe(image);
@@ -78,9 +78,9 @@ document.addEventListener("DOMContentLoaded", function() {
       }    
 
       lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
+        var scrollTop = window.scrollY;
         lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+            if(img.offsetTop < (window.innerHeight + scrollTop + 100)) {
               img.src = img.dataset.src;
               img.classList.remove('lazy');
             }
@@ -103,8 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Function to toggle active class
 document.querySelectorAll('.menu_list .menu-item').forEach(item => {
   item.addEventListener('click', function() {
-      // Remove active class from all links
-      console.log(item)
+
       document.querySelectorAll('.menu_list .menu-item').forEach(link => {
           link.classList.remove('active');
       });
@@ -117,7 +116,6 @@ document.querySelectorAll('.menu_list .menu-item').forEach(item => {
 document.addEventListener("DOMContentLoaded", function() {
   // Get all dropdown content <a> tags
   var dropdownLinks = document.querySelectorAll(".dropdown-content a");
-  console.log(dropdownLinks)
 
   // Check if any of the dropdown links have the class "activeLink"
   var hasActiveLink = false;
