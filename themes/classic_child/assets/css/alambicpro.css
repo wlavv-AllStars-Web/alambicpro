@@ -50,7 +50,7 @@ main {
 #header .header-top .container .row .header-top-logo img {
   /* max-height: 96px; */
   height: auto;
-  width: 175px;
+  width: 190px;
 }
 
 #index #wrapper {
@@ -124,7 +124,7 @@ main {
 }
 
 #_desktop_logo{
-  width: auto;
+  /* width: auto; */
 }
 
 .header-top-logo {
@@ -146,7 +146,7 @@ main {
 #header .menu .menu_list{
     display: flex;
     gap: 2rem;
-    font-size: var(--fs-s);
+    font-size: var(--fs-m);
     margin: 0;
 }
 #header .menu .menu_list .menu-item a{
@@ -1715,6 +1715,13 @@ input[type="checkbox"] {
   .container {
     width: 1320px;
     max-width: 100%;
+  }
+
+  .header-top .container {
+    padding: 0;
+  }
+  .header-top .container #_desktop_logo{
+    padding: 0;
   }
 }
 @media (min-width: 1600px) {

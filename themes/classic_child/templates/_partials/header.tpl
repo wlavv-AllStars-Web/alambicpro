@@ -26,6 +26,7 @@
  {* {assign var="currentUrl" value="http://"|cat:$smarty.server.HTTP_HOST|cat:$smarty.server.REQUEST_URI} *}
  {assign var="currentUrl" value="{$link->protocol_link}{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}"}
  {assign var='aboutus_link' value=$link->getPageLink('index', true)|cat:'#aboutus'}
+ {assign var="currentLanguage" value=Context::getContext()->language->iso_code}
 
  
 
@@ -34,7 +35,6 @@
 {* <pre>{$link.protocol_link|print_r}</pre> *}
 {* {$aboutus_link} *}
  {* {$current_url = $smarty.server.REQUEST_URI} *}
- {assign var="currentLanguage" value=Context::getContext()->language->iso_code}
 
 {block name='header_banner'}
   <div class="header-banner">

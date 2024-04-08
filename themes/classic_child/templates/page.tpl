@@ -37,12 +37,17 @@
     {/block}
 
     {block name='page_content_container'}
-      <div id="content" class="page-content card card-block">
+      {* <div class="container-loginpage" style="display: flex;">
+      <div class="img-login" style="flex: 1;">
+        <img src="https://albinovieira.pt/wp-content/uploads/2023/07/destilarias_1920x.webp" style="width: 100%;">
+      </div> *}
+      <div id="content" class="page-content card card-block" >
         {block name='page_content_top'}{/block}
         {block name='page_content'}
           <!-- Page content -->
         {/block}
       </div>
+      {* </div> *}
     {/block}
 
     {block name='page_footer_container'}

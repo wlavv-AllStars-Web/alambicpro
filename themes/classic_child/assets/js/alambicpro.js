@@ -134,3 +134,23 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const menuIcon = document.querySelector("#menu-icon");
+  const menuIconIcon = document.querySelector("#menu-icon i");
+
+  menuIcon.addEventListener("click", () => {
+    updateMenuIcon(); 
+  });
+
+  function updateMenuIcon() {
+    const header = document.querySelector("#header");
+    const isOpen = header.classList.contains("is-open");
+    if (isOpen) {
+      menuIconIcon.innerHTML = "\ue5d2"; // Change to close icon
+    } else {
+      menuIconIcon.innerHTML = "\ue5cd"; // Change to open icon
+    }
+  }
+});
