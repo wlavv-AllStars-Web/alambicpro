@@ -1132,11 +1132,12 @@ input[type="checkbox"] {
 .product-accessories .product-title{
   font-size: .875rem;
   text-overflow: ellipsis;
-  max-width: 160px;
+  max-width: 90vw;
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
   color: #7a7a7a;
+  width: 100%;
 }
 
 
@@ -1902,4 +1903,10 @@ input[type="checkbox"] {
 
 .bootstrap-touchspin{
   display: flex;
+}
+
+.product-prices{
+  display: flex;
+  gap: 1rem;
+  margin-block: 2rem;
 }
