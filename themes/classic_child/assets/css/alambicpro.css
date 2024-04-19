@@ -1878,6 +1878,14 @@ input[type="checkbox"] {
   .header-top .container #_desktop_logo{
     padding: 0;
   }
+
+  #authentication #content {
+    width: 100%;
+  max-width: 704px;
+  }
+  #authentication #content .login-form{
+    width: 100%;
+  }
 }
 @media (min-width: 1600px) {
   .container {
