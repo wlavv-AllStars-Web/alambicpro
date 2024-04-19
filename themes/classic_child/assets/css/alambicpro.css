@@ -128,7 +128,7 @@ main {
 
 .menu-items-top-item a:hover{
   cursor: pointer;
-  text-decoration: 2px underline var(--text-color1-200);
+  text-decoration: 2px underline var(--text-color1-200) !important;
   color: var(--text-color1-200) !important;
 }
 
