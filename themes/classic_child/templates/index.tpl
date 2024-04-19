@@ -33,8 +33,8 @@
          {$HOOK_HOME nofilter}
 
          <div class="grid">
+
            <div class="card_1 card">
-           
             <img class="" src="https://www.maritastills.es/img/cms/destila_2.jpg" style="width: 100%; position: absolute;height: 100%;
             object-fit: cover;" alt="Tradicionais" />
              <div class="layer"></div>
@@ -91,6 +91,7 @@
              <div class="content_category">{l s='Alquitarras' d='Shop.Theme.Alambic'}</div>
              <div class="buy"><a href="{$link->getCategoryLink(10)}">{l s='BUY NOW' d='Shop.Theme.Alambic'}</a></div>
            </div>
+
            <div class="card_9 card lazy">
            <img class="lazy" data-src="https://albinovieira.pt/wp-content/uploads/2023/11/alambiques-cat-1500x1500-1.webp" style="width: 100%; position: absolute;height: 100%;
            object-fit: cover;" alt="Profissionais">
@@ -98,6 +99,33 @@
              <div class="content_category">{l s='Alambiques Profissionais' d='Shop.Theme.Alambic'}</div>
              <div class="buy"><a href="{$link->getCategoryLink(11)}">{l s='BUY NOW' d='Shop.Theme.Alambic'}</a></div>
            </div>
+
+           <div class="card_10 card lazy">
+           <img class="lazy" data-src="https://albinovieira.pt/wp-content/uploads/2023/11/alambiques-cat-1500x1500-1.webp" style="width: 100%; position: absolute;height: 100%;
+           object-fit: cover;" alt="Profissionais">
+             <div class="layer"></div>
+             <div class="content_category">{l s='Alambiques Charentais' d='Shop.Theme.Alambic'}</div>
+             <div class="buy"><a href="{$link->getCategoryLink(12)}">{l s='BUY NOW' d='Shop.Theme.Alambic'}</a></div>
+           </div>
+           <div class="card_11 card lazy">
+           <img class="lazy" data-src="https://albinovieira.pt/wp-content/uploads/2023/11/alambiques-cat-1500x1500-1.webp" style="width: 100%; position: absolute;height: 100%;
+           object-fit: cover;" alt="Profissionais">
+             <div class="layer"></div>
+             <div class="content_category">{l s='Alambiques Arabicos' d='Shop.Theme.Alambic'}</div>
+             <div class="buy"><a href="{$link->getCategoryLink(13)}">{l s='BUY NOW' d='Shop.Theme.Alambic'}</a></div>
+           </div>
+           <div class="card_12 card lazy">
+           <img class="lazy" data-src="https://albinovieira.pt/wp-content/uploads/2023/11/alambiques-cat-1500x1500-1.webp" style="width: 100%; position: absolute;height: 100%;
+           object-fit: cover;" alt="Profissionais">
+             <div class="layer"></div>
+             <div class="content_category">{l s='Panelas em Cobre' d='Shop.Theme.Alambic'}</div>
+             <div class="buy"><a href="{$link->getCategoryLink(14)}">{l s='BUY NOW' d='Shop.Theme.Alambic'}</a></div>
+           </div>
+
+
+
+
+
          </div>
 
          <section class="aboutus_section">

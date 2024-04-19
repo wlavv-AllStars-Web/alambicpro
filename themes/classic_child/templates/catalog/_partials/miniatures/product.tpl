@@ -117,7 +117,7 @@
                 {if '' !== $smarty.capture.custom_price}
                   {$smarty.capture.custom_price nofilter}
                 {else}
-                  {$product.price}
+                  {$product.price_tax_exc} €
                 {/if}
               </span>
 

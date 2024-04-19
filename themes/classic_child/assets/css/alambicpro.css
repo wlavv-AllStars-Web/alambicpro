@@ -82,7 +82,7 @@ main {
 }
 
 #header .header-nav {
-  background: var(--text-color1-200);
+  background: var(--bg);
 }
 
 #header .header-nav .language-selector {
@@ -105,12 +105,28 @@ main {
     height: 50px;
 }
 #header .whatsapp_number a{
-    color: #fff;
+    color: var(--text-color1-100);
     font-size: var(--fs-s);
 }
 #header .whatsapp_number a:hover{
-    text-decoration: 2px underline #fff;
+    text-decoration: 2px underline var(--text-color1-200);
+    color: var(--text-color1-200);
 }
+
+.menu-items-top-item a{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color1-100) !important;
+  font-size: 1.1rem;
+}
+
+.menu-items-top-item a:hover{
+  cursor: pointer;
+  text-decoration: 2px underline var(--text-color1-200);
+  color: var(--text-color1-200) !important;
+}
+
 #header  .whatsapp_logo{
     transition: all 0.25s;
 }
@@ -171,13 +187,13 @@ main {
 .blockcart {
     position: relative;
     /* background: var(--primary); */
-    color: var(--text-color1-100);
+    color: var(--text-color1);
     padding: 0.65rem;
     border-radius: 50%;
 }
 
 .blockcart i{
-    font-size: var(--fs-l);
+    font-size: 1.75rem;
 }
 
 .blockcart a:hover{
@@ -199,16 +215,21 @@ main {
 }
 
 .blockcart .cart-products-count{
-    position: absolute;
-    left: 24px;
-    bottom: 5px;
-    color: #fff !important;
-    font-weight: 900;
-    background: var(--text-color1-300);
-    padding: 2px 5px;
-    border-radius: 50%;
-    font-size: 0.85rem;
-    line-height: 14px;
+  position: absolute;
+  left: 24px;
+  top: 5px;
+  color: #fff !important;
+  font-weight: 900;
+  background: var(--text-color1-300);
+  padding: 0;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  line-height: 14px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .blockcart.active:hover {
@@ -259,7 +280,6 @@ main {
     align-items: center;
 }
 #_desktop_language_selector img{
-    border: 1px solid var(--text-color1);
     border-radius: 0.15rem;
 }
 #_desktop_language_selector img:hover{
@@ -267,7 +287,17 @@ main {
 }
 
 #_desktop_language_selector .current img {
-  outline: 2px solid var(--shadow-2);
+  outline: 2px solid var(--text-color1);
+}
+
+.menu-items-top{
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+.menu-items-top div{
+  display: flex;
+  justify-content: center;
 }
 
 #footer{
@@ -360,7 +390,7 @@ main {
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 10px;
   }
@@ -1068,11 +1098,91 @@ input[type="checkbox"] {
   height: 50vh;
 }
 
+.language-selector li .dropdown-item {
+  display: flex;
+  padding: 0px 1rem;
+}
+.language-selector li .dropdown-item img{
+  height: 20px;
+  border-radius: 0.15rem;
+  outline: 1px solid black;
+  outline-offset: -1px;
+  object-fit: cover;
+}
+
+/* .product-accessories .products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.product-accessories .products .product{
+  width: 100%;
+} */
+
+.product-accessories .product-title{
+  font-size: .875rem;
+  text-overflow: ellipsis;
+  max-width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  color: #7a7a7a;
+}
 
 
+.btn-back-top{
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  background: var(--text-color1);
+  color: #fff;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.page-cms-7{
+  padding: 0 !important;
+}
+
+.cms-revenda .contact-form .form-fields .form-group:nth-child(2){
+  display: none;
+}
+
+.contact-cms .contact-form h3 {
+  color: #fff;
+}
+
+.contact-cms .form-control-label{
+  color: #fff;
+  text-align: left;
+}
+.contact-cms .contact-form{
+  background: var(--text-color1-200);
+}
+
+.cms-revenda {
+  padding: 3rem 0;
+}
 /* responsive layout */
 
   
+@media (min-width: 1921px) {
+  .container {
+    width: 1750px !important;
+  }
+}
+@media (min-width: 1600px) and (max-width:1921px) {
+  .container {
+    width: 90vw !important;
+  }
+}
+
 @media (max-width: 1200px) {
   .grid {
     grid-template-columns: 1fr 1fr;

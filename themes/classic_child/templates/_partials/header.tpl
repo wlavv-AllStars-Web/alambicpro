@@ -49,7 +49,7 @@
         <div class="hidden-sm-down">
           <div class="col-md-5 col-xs-12">
             {hook h='displayNav1'}
-            <div class="whatsapp_content hidden-sm-down">
+            {* <div class="whatsapp_content hidden-sm-down">
               <div class="whatsapp_logo">
               <a href="https://wa.me/961234567" target="_blank" > 
                 <img src = "/themes/classic_child/assets/css/whatsapp_footer.svg" alt="Whatsapp Logo"/>
@@ -58,7 +58,7 @@
               <div class="whatsapp_number">
                 <a href="https://wa.me/961234567" target="_blank">{l s='961234567' d='Shop.Theme.Alambic'}</a>
               </div>
-            </div>
+            </div> *}
           </div>
           <div class="col-md-7 right-nav">
               {hook h='displayNav2'}
@@ -103,11 +103,34 @@
             {/if}
           {/if}
         </div>
+       <div class="col-md-8">
 
-        <div class="menu col-md-8 hidden-sm-down">
+        <div class="col-md-12 menu-items-top">
+          <div class="whatsapp_content hidden-sm-down col-md-4">
+            <div class="whatsapp_logo">
+            <a href="https://wa.me/961234567" target="_blank" > 
+              <img src = "/themes/classic_child/assets/css/whatsapp_footer.svg" alt="Whatsapp Logo"/>
+            </a>
+            </div>
+            <div class="whatsapp_number">
+              <a href="https://wa.me/961234567" target="_blank">{l s='961234567' d='Shop.Theme.Alambic'}</a>
+            </div>
+          </div>
+          
+          <div class="col-md-4 menu-items-top-item">
+            <a><i class="fa-solid fa-envelope"></i>info@alembicpro.com</a>
+          </div>
+
+          <div class="col-md-4 menu-items-top-item">
+            <a><i class="fa-solid fa-phone"></i>000 000 000</a>
+          </div>
+
+        </div>
+
+        <div class="menu col-md-12 hidden-sm-down">
           <ul class="menu_list">
             <li class="menu-item {if $currentUrl === $link->getPageLink('index',true)}active{/if}"><a href="/">{l s='Home' d='Shop.Theme.Alambic'}</a></li>
-            <li class="menu-item"><a href="/#aboutus" onclick="smoothScroll(event)">{l s='About Us' d='Shop.Theme.Alambic'}</a></li>
+            
             <li class="menu-item dropdown ">
               <div class="dropbtn" onclick="clickdropdown(this)"><a>{l s='Products' d='Shop.Theme.Alambic'}</a> <i class="fa-solid fa-caret-down"></i></div>
               <ul class="dropdown-content hidden-md-down">
@@ -118,10 +141,14 @@
                 <li><a href="{$categories[1][2]['infos']['id_category']}-{$categories[1][2]['infos']['link_rewrite']}">{l s='All' d='Shop.Theme.Alambic'}</a></li>
               </ul>
             </li>
-            <li class="menu-item"><a>{l s='(..Falta..)' d='Shop.Theme.Alambic'}</a></li>
-            <li class="menu-item {if $currentUrl === $link->getPageLink('contact', true)}active{/if}"><a href="{$link->getPageLink('contact', true)}">{l s='Contact' d='Shop.Theme.Alambic'}</a></li>
+            <li class="menu-item"><a href="/#aboutus" onclick="smoothScroll(event)">{l s='About Us' d='Shop.Theme.Alambic'}</a></li>
+          <li class="menu-item {if $currentUrl === $link->getPageLink('contact', true)}active{/if}"><a href="{$link->getPageLink('contact', true)}">{l s='Contact' d='Shop.Theme.Alambic'}</a></li>
+            <li class="menu-item"><a href="{$link->getCMSLink(7)}">{l s='Resale' d='Shop.Theme.Alambic'}</a></li>
           </ul>
         </div>
+      </div>
+
+
         <div class="header-top-right col-md-2 col-sm-12 position-static hidden-sm-down">
           <div class="header_top_icons">
             {hook h='displayTop'}
