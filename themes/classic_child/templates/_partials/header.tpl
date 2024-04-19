@@ -103,9 +103,9 @@
             {/if}
           {/if}
         </div>
-       <div class="col-md-8 menus-top-header">
+       <div class="col-md-12 col-lg-8 menus-top-header hidden-sm-down">
 
-        <div class="col-md-12 menu-items-top">
+        <div class="col-md-12 menu-items-top ">
           <div class="whatsapp_content hidden-sm-down col-md-4">
             <div class="whatsapp_logo">
             <a href="https://wa.me/961234567" target="_blank" > 
@@ -172,9 +172,10 @@
               <li><a href="{$categories[1][2]['infos']['id_category']}-{$categories[1][2]['infos']['link_rewrite']}">{l s='All' d='Shop.Theme.Alambic'}</a></li>
             </ul>
           </li>
-          <li class="menu-item"><a>{l s='(Em falta)' d='Shop.Theme.Alambic'}</a></li>
           <li class="menu-item {if $currentUrl === $link->getPageLink('contact', true)}active{/if}"><a href="{$link->getPageLink('contact', true)}">{l s='Contact' d='Shop.Theme.Alambic'}</a></li>
+          <li class="menu-item"><a href="{$link->getCMSLink(7)}">{l s='Resale' d='Shop.Theme.Alambic'}</a></li>
           <li class="menu-item">
+
           <div class="whatsapp_content">
             <div class="whatsapp_logo">
             <a href="https://wa.me/961234567" target="_blank" > 
@@ -182,8 +183,18 @@
             </a>
             </div>
             <div class="whatsapp_number">
-              <a href="https://wa.me/961234567" target="_blank" style="color: var(--text-color1);">{l s='961234567' d='Shop.Theme.Alambic'}</a>
+              <a href="https://wa.me/961234567" target="_blank" style="color: var(--text-color1-100);">{l s='961234567' d='Shop.Theme.Alambic'}</a>
             </div>
+          </div>
+          </li>
+          <li class="menu-item">
+          <div>
+            <a><i class="fa-solid fa-envelope"></i>info@alembicpro.com</a>
+          </div>
+          </li>
+          <li class="menu-item">
+          <div>
+            <a><i class="fa-solid fa-phone"></i>000 000 000</a>
           </div>
           </li>
         </ul>
