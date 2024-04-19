@@ -39,4 +39,5 @@
     {/foreach}
   </script>
   <script type="text/javascript" src="/themes/classic_child/assets/js/alambicpro.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 {/if}

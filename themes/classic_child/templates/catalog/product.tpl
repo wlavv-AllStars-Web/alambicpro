@@ -89,13 +89,21 @@
                 <section class="product-accessories clearfix">
                   <p class="h5 text-uppercase">{l s='Produtos recomendados' d='Shop.Theme.Catalog'}</p>
                   <div class="products row">
-                    {foreach from=$accessories item="product_accessory" key="position"}
-                      {if position > 2}
-                        {block name='product_miniature'}
-                          {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory position=$position productClasses="col-xs-12 col-sm-6 col-lg-4 col-xl-3"}
-                        {/block}
-                      {/if}
-                    {/foreach}
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        {foreach from=$accessories item="product_accessory" key="position"}
+                          {if position > 2}
+                            {block name='product_miniature'}
+                              <div class="swiper-slide">
+                              {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory position=$position productClasses="col-xs-12 col-sm-6 col-lg-4 col-xl-3"}
+                              </div>
+                            {/block}
+                          {/if}
+                        {/foreach}
+                      </div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
                   </div>
                 </section>
               {/if}

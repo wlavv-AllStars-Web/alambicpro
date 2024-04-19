@@ -174,3 +174,40 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  let prependNumber = 1;
+      const swiper = new Swiper('.swiper', {
+        slidesPerView: 2,
+        centeredSlides: false,
+        spaceBetween: 0,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+          },
+          1600: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
+        },
+      });
+  });
