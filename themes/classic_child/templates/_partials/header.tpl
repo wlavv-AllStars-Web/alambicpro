@@ -103,7 +103,7 @@
             {/if}
           {/if}
         </div>
-       <div class="col-md-8">
+       <div class="col-md-8 menus-top-header">
 
         <div class="col-md-12 menu-items-top">
           <div class="whatsapp_content hidden-sm-down col-md-4">
