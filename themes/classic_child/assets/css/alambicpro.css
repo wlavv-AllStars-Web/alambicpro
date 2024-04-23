@@ -1923,3 +1923,51 @@ input[type="checkbox"] {
   gap: 1rem;
   margin-block: 2rem;
 }
+
+#mobile_top_menu_wrapper .js-top-menu-bottom {
+  background: var(--text-color1-100) !important;
+}
+#mobile_top_menu_wrapper .js-top-menu-bottom .whatsapp_content{
+  padding: 0 1rem;
+  gap: 1rem;
+}
+#mobile_top_menu_wrapper .js-top-menu-bottom .whatsapp_number a{
+  color: #fff !important;
+}
+#mobile_top_menu_wrapper .js-top-menu-bottom .email-menu{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+#mobile_top_menu_wrapper .js-top-menu-bottom .email-menu i{
+  width: 31px;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+}
+#mobile_top_menu_wrapper .js-top-menu-bottom .email-menu a{
+  color: #fff;
+  gap: 1rem;
+  display: flex;
+  align-items: baseline;
+}
+#mobile_top_menu_wrapper .js-top-menu-bottom .phone-menu {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+#mobile_top_menu_wrapper .js-top-menu-bottom .phone-menu i{
+  width: 31px;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+}
+#mobile_top_menu_wrapper .js-top-menu-bottom .phone-menu a{
+  color: #fff;
+  gap: 1rem;
+  display: flex;
+  align-items: baseline;
+  
+}

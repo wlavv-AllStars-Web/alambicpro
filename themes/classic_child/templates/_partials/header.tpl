@@ -174,7 +174,7 @@
           </li>
           <li class="menu-item {if $currentUrl === $link->getPageLink('contact', true)}active{/if}"><a href="{$link->getPageLink('contact', true)}">{l s='Contact' d='Shop.Theme.Alambic'}</a></li>
           <li class="menu-item"><a href="{$link->getCMSLink(7)}">{l s='Resale' d='Shop.Theme.Alambic'}</a></li>
-          <li class="menu-item">
+          {* <li class="menu-item">
 
           <div class="whatsapp_content">
             <div class="whatsapp_logo">
@@ -196,10 +196,26 @@
           <div>
             <a><i class="fa-solid fa-phone"></i>000 000 000</a>
           </div>
-          </li>
+          </li> *}
         </ul>
         </div>
         <div class="js-top-menu-bottom">
+          <div class="whatsapp_content">
+            <div class="whatsapp_logo">
+            <a href="https://wa.me/961234567" target="_blank" > 
+              <img src = "/themes/classic_child/assets/css/whatsapp_footer.svg" alt="Whatsapp Logo"/>
+            </a>
+            </div>
+            <div class="whatsapp_number">
+              <a href="https://wa.me/961234567" target="_blank" style="color: var(--text-color1-100);">{l s='961234567' d='Shop.Theme.Alambic'}</a>
+            </div>
+          </div>
+          <div class="email-menu">
+            <a><i class="fa-solid fa-envelope"></i>info@alembicpro.com</a>
+          </div>
+          <div class="phone-menu">
+            <a><i class="fa-solid fa-phone"></i>000 000 000</a>
+          </div>
           <div id="_mobile_currency_selector"></div>
           <div id="_mobile_language_selector"></div>
           <div id="_mobile_contact_link"></div>
