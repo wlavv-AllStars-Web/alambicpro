@@ -172,9 +172,9 @@ main {
     margin: 0;
 }
 #header .menu .menu_list .menu-item a{
-    color: var(--text-color1-100);
+    color: var(--text-color1-100) !important;
     font-weight: 600;
-    padding: 0.85rem 0;
+    padding: 0.5rem 0;
 }
 #header .menu .menu_list .menu-item a:focus{
   text-decoration: 3px underline var(--text-color1-100) !important;
@@ -617,7 +617,7 @@ main {
   .dropdown:hover .dropdown-content {
     display: block ;
     width: max-content;
-    background: var(--text-color1-200);
+    background: var(--bg);
   }
   
   .dropdown-content li {
@@ -653,7 +653,7 @@ main {
     height: 30px;
     position: absolute;
     left: 5px;
-    background-image: url('whisky-still-30_white.png');
+    background-image: url('whisky-still-30.png');
     top: 50%;
     transform: translateY(-50%);
   }
@@ -936,6 +936,20 @@ input[type="checkbox"] {
 }
 
 /* contact page */
+#contact #content-wrapper #content {
+  background: var(--text-color1-200) !important;
+}
+
+.contact-form {
+ background: transparent !important;
+}
+.contact-form .form-fields h3 {
+  color: #fff;
+}
+.contact-form .form-control-label {
+  color: #fff;
+}
+
 #contact #content-wrapper #content{
   background: #f6f6f6;
   position: relative;
@@ -944,19 +958,20 @@ input[type="checkbox"] {
   content: '';
   position: absolute;
   left: 0;
-  top: 50%;
-  height: 50%;
-  width: 1px;
-  background-color: var(--text-color1-200);
+  bottom: 0;
+  height: 70%;
+  width: 9px;
+  background-color: var(--text-color1-100);
 }
+
 #contact #content-wrapper #content::after{
   content: '';
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 1px;
-  width: 50%;
-  background-color: var(--text-color1-200);
+  height: 13px;
+  width: 80%;
+  background-color: var(--text-color1-100);
 }
 
 .contact-form {

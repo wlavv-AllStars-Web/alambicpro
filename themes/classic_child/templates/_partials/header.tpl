@@ -109,7 +109,7 @@
           <div class="whatsapp_content hidden-sm-down col-md-4">
             <div class="whatsapp_logo">
             <a href="https://wa.me/961234567" target="_blank" > 
-              <img src = "/themes/classic_child/assets/css/whatsapp_footer.svg" alt="Whatsapp Logo"/>
+              <img src = "/themes/classic_child/assets/css/whatsapp.svg" alt="Whatsapp Logo"/>
             </a>
             </div>
             <div class="whatsapp_number">
